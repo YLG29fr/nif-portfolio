@@ -1,55 +1,85 @@
 <!-- src/components/layout/NavBar.vue -->
 
 <template>
-    <nav class="navbar">
-        <img :src="logo" alt="" class="logoNif">
-        <ul class="nav-links">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="burger" @click="toggleMenu" aria-label="Ouvrir le menu" v-if="isMobile">
-        <span></span>
-        <span></span>
-        <span></span>
-        </button>
-        <div class="mobile-menu" v-if="menuOpen && isMobile">
-        <!-- Liens du menu mobile -->
-        <a href="#home" @click="toggleMenu">Accueil</a>
-        <a href="#about" @click="toggleMenu">À propos</a>
-        <a href="#projects" @click="toggleMenu">Projets</a>
-        <a href="#contact" @click="toggleMenu">Contact</a>
-        </div>
-    </nav>
+    <header>
+
+        <nav class="navbar px-6 pt-2" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                            
+                <img :src="logo" alt="" class="logoNif">
+            
+                <button  class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbar" >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-start ml-6">
+                    <a class="navbar-item"
+                        href="#aboutMe" >
+                        À propos de moi    
+                    </a>
+                    
+                    <a class="navbar-item"
+                        href="#skills" >
+                        Compétences    
+                    </a>
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"
+                            href="#projets" >
+                            Mes Projets  
+                        </a>
+                        
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item"
+                                href="#gemenyWeb" >
+                                Interface Gemeny Web  
+                            </a><a class="navbar-item"
+                                href="#projet2" >
+                                Projet 2 
+                            </a><a class="navbar-item"
+                                href="#projet3" >
+                                Projet 3  
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Contact</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 </template>
 
 <script setup lang="ts">
-    import { ref, computed, onMounted, onUnmounted } from 'vue'
     import logo from '../../assets/logo.png'
+    
 
-    const menuOpen = ref(false)
-    const width = ref(window.innerWidth)
-    const isMobile = computed(() => width.value < 1024)
 
-    function toggleMenu() {
-    menuOpen.value = !menuOpen.value
-    }
 
-    function handleResize() {
-    width.value = window.innerWidth
-    }
 
-    onMounted(() => window.addEventListener('resize', handleResize))
-    onUnmounted(() => window.removeEventListener('resize', handleResize))
 </script>
 
 <style scoped>
 
     .logoNif {
         height: 4em;
-    }
+        }
 
+/* 
     .navbar {
         display: flex;
         align-items: center;
@@ -83,7 +113,7 @@
     }
 
     /* Responsive styles */
-    @media (max-width: 1023px) {
+    /* @media (max-width: 1023px) {
         .nav-links {
             display: none;
         }
@@ -108,6 +138,6 @@
         .mobile-menu {
             display: none;
         }
-    }
+    }  */
 
 </style>

@@ -19,4 +19,7 @@ export default {
 
     LOADING:"Chargement du serveur ...",
 
+    title:"Portfolio - Yoann Le Goff",
+    msg:"Je cherche un stage CDA",
+
 }

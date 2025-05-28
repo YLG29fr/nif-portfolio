@@ -19,4 +19,7 @@ export default {
 
     LOADING:"Loading server info ...",
 
+    title:"Portfolio - Yoann Le Goff",
+    msg:"I'm looking for a CDA internship",
+
 }

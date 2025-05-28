@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
+
 import './style.css'
+
 import App from './App.vue'
 import i18next from './lib/i18n'
 import I18NextVue from 'i18next-vue'

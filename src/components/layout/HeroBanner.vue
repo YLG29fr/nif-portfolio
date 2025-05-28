@@ -7,16 +7,20 @@
   import {useTranslation} from 'i18next-vue'
   const {t} = useTranslation();
 
-  const title = t('heroBanner.title');
-  const msg = t('heroBanner.msg');
+  const title = t('common:title');
+  const msg = t('common:msg');
 
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
-  <h2>{{ msg }}</h2>
-
-  <img :src="logo" alt="mon logo Renard" class="hoverEffect"/>
+  <section class="section" style="margin-top: 30vh;">
+    <div ></div>
+    
+    <h1>{{ title }}</h1>
+    <h2>{{ msg }}</h2>
+    
+    <img :src="logo" alt="mon logo Renard" class="hoverEffect"/>
+  </section>
 
 </template>
 
