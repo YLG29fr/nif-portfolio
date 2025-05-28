@@ -4,7 +4,7 @@
 
 defineProps<{ title: string, msg: string }>()
 
-import logoBanner from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 
 </script>
 
@@ -12,7 +12,7 @@ import logoBanner from '../assets/logo.png'
   <h1>{{ title }}</h1>
   <h2>{{ msg }}</h2>
 
-  <img :src="logoBanner" alt="alt de la banner" class="hoverEffect"/>
+  <img :src="logo" alt="mon logo Renard" class="hoverEffect"/>
 
 </template>
 

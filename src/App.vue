@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import HeroBanner from './components/HeroBanner.vue'
+import HeroBanner from './components/layout/HeroBanner.vue'
 </script>
 
 <template>
