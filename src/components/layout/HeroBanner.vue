@@ -1,4 +1,4 @@
-<!-- src/components/HelloWorld.vue -->
+<!-- src/components/layout/HelloWorld.vue -->
 
 <script setup lang="ts">
 
