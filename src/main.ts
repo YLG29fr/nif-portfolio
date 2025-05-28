@@ -1,5 +1,10 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import i18next from './lib/i18n'
+import I18NextVue from 'i18next-vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(I18NextVue, { i18next })
+
+app.mount('#app')

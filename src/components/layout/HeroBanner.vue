@@ -2,9 +2,13 @@
 
 <script setup lang="ts">
 
-defineProps<{ title: string, msg: string }>()
+  import logo from '../../assets/logo.png'
 
-import logo from '../../assets/logo.png'
+  import {useTranslation} from 'i18next-vue'
+  const {t} = useTranslation();
+
+  const title = t('heroBanner.title');
+  const msg = t('heroBanner.msg');
 
 </script>
 
