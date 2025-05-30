@@ -2,13 +2,29 @@
 
 <script setup lang="ts">
 
-    import { ref } from 'vue';
+    import { ref, computed } from 'vue';
+
+    import {useTranslation} from 'i18next-vue'
+    import i18next , { changeLanguage } from 'i18next';
+    
     import logo from '../../assets/logo.png';
     
-    const isBurgerActive = ref(false);
+    const {t} = useTranslation('navBar');
 
+    const isBurgerActive = ref(false);
     function toggleMenu() {
         isBurgerActive.value = !isBurgerActive.value;
+    }
+
+    const currentLang = ref(i18next.language);
+    i18next.on('languageChanged', (lng) => {
+        currentLang.value = lng
+    });
+
+    const nextLang = computed(() => currentLang.value === 'fr' ? 'en' : 'fr')
+
+    function changeLang() {
+        changeLanguage(nextLang.value);
     }
 
 </script>
@@ -19,7 +35,9 @@
         <nav class="navbar is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
             <!-- Logo -->
             <div class="navbar-brand">
-                <img :src="logo" alt="" class="logoNif">
+                <a href="#">
+                    <img :src="logo" alt="" class="logoNif">
+                </a>
                 <!-- Bouton burger -->
                 <button @click="toggleMenu" :class="{'is-active': isBurgerActive}"
                 class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbar" >
@@ -34,18 +52,18 @@
                 <div class="navbar-start ml-6">
                     <a class="navbar-item"
                         href="#aboutMe" >
-                        À propos de moi    
+                        {{ t('navBar:ABOUT_ME_BUTTON') }}    
                     </a>
                     
                     <a class="navbar-item"
                         href="#skills" >
-                        Compétences    
+                        {{ t('navBar:SKILLS_BUTTON') }}  
                     </a>
                     
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link"
                             href="#projets" >
-                            Mes Projets  
+                            {{ t('navBar:PROJECTS_BUTTON') }}
                         </a>
                         
                         <div class="navbar-dropdown">
@@ -67,8 +85,15 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
+                            <a class="button" @click="changeLang">
+                                <strong>{{ t('navBar:OTHER_LANG') }}</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="buttons">
                             <a class="button">
-                                <strong>Contact</strong>
+                                <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
                             </a>
                         </div>
                     </div>

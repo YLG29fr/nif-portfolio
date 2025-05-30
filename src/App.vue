@@ -3,6 +3,7 @@
   import NavBar from './components/layout/NavBar.vue'
   import HeroBanner from './components/layout/HeroBanner.vue'
   import AboutMe from './components/layout/AboutMe.vue'
+  import SkillsList from './components/layout/SkillsList.vue';
 
 </script>
 
@@ -15,10 +16,8 @@
     
     <HeroBanner/>
     
-    <HeroBanner/>
-    <HeroBanner/>
-    
     <AboutMe/>
+    <SkillsList/>
 
   </section>
 

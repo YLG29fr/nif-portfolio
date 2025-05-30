@@ -5,13 +5,17 @@
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
 
-    const aboutMe = t('common:aboutMe');
-
 </script>
 
 <template>
     <section id="aboutMe" class="section">
-        <p> {{ aboutMe }} </p>
+        <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
+        <br>
+        <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
+        <br>
+        <p> {{ t('aboutMe:ABOUT_ME_3') }} </p>
+        <br>
+        <p> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
     </section>
 </template>
 

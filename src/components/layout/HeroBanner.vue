@@ -7,9 +7,6 @@
   import {useTranslation} from 'i18next-vue'
   const {t} = useTranslation();
 
-  const title = t('common:title');
-  const msg = t('common:msg');
-
 </script>
 <template>
 
@@ -17,8 +14,8 @@
   >
   <!-- style="margin-top: 30vh;" -->
 
-    <h1>{{ title }}</h1>
-    <h2>{{ msg }}</h2>
+    <h1>{{ t('common:TITLE') }}</h1>
+    <h2>{{ t('common:SUB_TITLE') }}</h2>
     
     <img :src="logo" alt="mon logo Renard" class="hoverEffect"/>
   </section>

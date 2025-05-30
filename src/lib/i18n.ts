@@ -11,7 +11,7 @@ i18next
         debug: true,
         resources: translations,
         interpolation: { escapeValue: false },
-        ns: ["common", "errors"],
+        ns: ["common", "errors", "navBar", "altDesc", "aboutMe"],
         defaultNS: "common",
 });
 
