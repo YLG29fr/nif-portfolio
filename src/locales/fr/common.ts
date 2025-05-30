@@ -1,3 +1,5 @@
+import AboutMe from "../../components/layout/AboutMe.vue";
+
 export default {
 
     VALID_RULE_BUTTON_MESSAGE:"Règles validées",
@@ -21,5 +23,7 @@ export default {
 
     title:"Portfolio - Yoann Le Goff",
     msg:"Je cherche un stage CDA",
+
+    aboutMe: "A propos de moi",
 
 }

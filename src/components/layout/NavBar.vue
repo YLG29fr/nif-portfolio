@@ -1,22 +1,36 @@
 <!-- src/components/layout/NavBar.vue -->
 
-<template>
-    <header>
+<script setup lang="ts">
 
-        <nav class="navbar px-6 pt-2" role="navigation" aria-label="main navigation">
+    import { ref } from 'vue';
+    import logo from '../../assets/logo.png';
+    
+    const isBurgerActive = ref(false);
+
+    function toggleMenu() {
+        isBurgerActive.value = !isBurgerActive.value;
+    }
+
+</script>
+
+<template>
+
+    <header>
+        <nav class="navbar is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
+            <!-- Logo -->
             <div class="navbar-brand">
-                            
                 <img :src="logo" alt="" class="logoNif">
-            
-                <button  class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbar" >
+                <!-- Bouton burger -->
+                <button @click="toggleMenu" :class="{'is-active': isBurgerActive}"
+                class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbar" >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            
-            <div id="navbar" class="navbar-menu">
+            <!-- Menu -->
+            <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}">
                 <div class="navbar-start ml-6">
                     <a class="navbar-item"
                         href="#aboutMe" >
@@ -49,11 +63,11 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- Bouton CTA -->
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary">
+                            <a class="button">
                                 <strong>Contact</strong>
                             </a>
                         </div>
@@ -62,22 +76,34 @@
             </div>
         </nav>
     </header>
+
 </template>
-
-<script setup lang="ts">
-    import logo from '../../assets/logo.png'
-    
-
-
-
-
-</script>
 
 <style scoped>
 
+    /* .navbar, .navbar-menu, .navbar-dropdown {
+        background-color: var(--color-purple);
+    } */
+
     .logoNif {
         height: 4em;
+    }
+
+    @media (max-width: 1023px) {
+        .navbar-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: none;
         }
+        .navbar-menu.is-active {
+            display: block;
+        }
+    }
+
+
 
 /* 
     .navbar {

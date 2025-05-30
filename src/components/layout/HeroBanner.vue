@@ -11,11 +11,12 @@
   const msg = t('common:msg');
 
 </script>
-
 <template>
-  <section class="section" style="margin-top: 30vh;">
-    <div ></div>
-    
+
+  <section class="section" 
+  >
+  <!-- style="margin-top: 30vh;" -->
+
     <h1>{{ title }}</h1>
     <h2>{{ msg }}</h2>
     

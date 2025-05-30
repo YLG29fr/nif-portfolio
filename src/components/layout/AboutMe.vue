@@ -1,11 +1,17 @@
 <!-- src/components/layout/AboutMe.vue -->
 
-<script>
+<script setup lang="ts">
+
+    import {useTranslation} from 'i18next-vue'
+    const {t} = useTranslation();
+
+    const aboutMe = t('common:aboutMe');
+
 </script>
 
 <template>
-    <section id="about-me" class="section">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam nostrum dignissimos enim ea </p>
+    <section id="aboutMe" class="section">
+        <p> {{ aboutMe }} </p>
     </section>
 </template>
 

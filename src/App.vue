@@ -1,8 +1,8 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-import NavBar from './components/layout/NavBar.vue'
-import HeroBanner from './components/layout/HeroBanner.vue'
-import AboutMe from './components/layout/AboutMe.vue'
+  // import HelloWorld from './components/HelloWorld.vue'
+  import NavBar from './components/layout/NavBar.vue'
+  import HeroBanner from './components/layout/HeroBanner.vue'
+  import AboutMe from './components/layout/AboutMe.vue'
 
 </script>
 
@@ -11,9 +11,15 @@ import AboutMe from './components/layout/AboutMe.vue'
   <NavBar></NavBar>
 
   <section class="section">
-    <HelloWorld msg="Vite + Vue" />   
+    <HelloWorld msg="Vite + Vue" />
+    
     <HeroBanner/>
+    
+    <HeroBanner/>
+    <HeroBanner/>
+    
     <AboutMe/>
+
   </section>
 
 </template>

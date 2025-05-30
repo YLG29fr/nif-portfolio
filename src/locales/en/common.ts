@@ -22,4 +22,6 @@ export default {
     title:"Portfolio - Yoann Le Goff",
     msg:"I'm looking for a CDA internship",
 
+    AboutMe: "About me",
+
 }
