@@ -8,6 +8,8 @@
     import i18next , { changeLanguage } from 'i18next';
     
     import logo from '../../assets/logo.png';
+    import toggleDarkMode from '../ui/toggleDarkMode.vue';
+
     
     const {t} = useTranslation('navBar');
 
@@ -32,7 +34,7 @@
 <template>
 
     <header>
-        <nav class="navbar is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
+        <nav class="navbar  is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
             <!-- Logo -->
             <div class="navbar-brand">
                 <a href="#">
@@ -40,7 +42,7 @@
                 </a>
                 <!-- Bouton burger -->
                 <button @click="toggleMenu" :class="{'is-active': isBurgerActive}"
-                class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbar" >
+                class='navbar-burger is-dark' aria-label="menu" aria-expanded="false" data-target="navbar" >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -66,37 +68,35 @@
                             {{ t('navBar:PROJECTS_BUTTON') }}
                         </a>
                         
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item"
-                                href="#gemenyWeb" >
-                                Interface Gemeny Web  
-                            </a><a class="navbar-item"
-                                href="#projet2" >
-                                Projet 2 
-                            </a><a class="navbar-item"
-                                href="#projet3" >
-                                Projet 3  
-                            </a>
-
+                        <div class="navbar-dropdown custom-dropdown">
+                            <ul class="dropdown-list">
+                            <li>
+                                <a class="dropdown-link" href="#gemenyWeb">Interface Gemeny Web</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-link" href="#projet2">Projet 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-link" href="#projet3">Projet 3</a>
+                            </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <!-- Bouton CTA -->
                 <div class="navbar-end">
-                    <div class="navbar-item">
+                    
                         <div class="buttons">
-                            <a class="button" @click="changeLang">
+                            <toggleDarkMode/>
+                            <button class="button" @click="changeLang">
                                 <strong>{{ t('navBar:OTHER_LANG') }}</strong>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button">
+                            </button>
+                            <button class="button">
                                 <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
-                            </a>
+                            </button>
                         </div>
-                    </div>
+                    
+                    
                 </div>
             </div>
         </nav>
@@ -105,10 +105,84 @@
 </template>
 
 <style scoped>
+.navbar {
+  background: linear-gradient(180deg, var(--color-purple) 90%, #ff9900 100%);
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  border-bottom: 1px solid #ff9900;
+}
 
-    /* .navbar, .navbar-menu, .navbar-dropdown {
-        background-color: var(--color-purple);
-    } */
+
+
+/* Style de base pour la liste du dropdown */
+.custom-dropdown .dropdown-list {
+
+  list-style: none;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.custom-dropdown .dropdown-link {
+
+    white-space: nowrap;
+  color: inherit;
+  display: block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+
+}
+
+/* Effet hover avec ::before (soulignement animé) */
+@media (min-width: 1024px) {
+    .navbar-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.6em; 
+    width: 0;
+    height: 2px;
+    background: var(--color-orange, #ff9900); 
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.navbar-item:hover::before,
+.navbar-item:focus::before {
+    width: 70%;
+}
+    .custom-dropdown .dropdown-link::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0.3em;
+        width: 0;
+        height: 2px;
+        background: var(--color-orange, #ff9900);
+        transition: width 0.3s cubic-bezier(.4,0,.2,1);
+        transform: translateX(-50%);
+    }
+    
+    .custom-dropdown .dropdown-link:hover::before,
+    .custom-dropdown .dropdown-link:focus::before {
+        width: 70%;
+    }
+    
+    .custom-dropdown .dropdown-link:hover,
+    .custom-dropdown .dropdown-link:focus {
+        color: var(--color-orange, #ff9900);
+        background: none;
+    }
+}
+    
+    /* Version mobile */
+@media (max-width: 1023px) {
+    .navbar-dropdown {
+    background-color: transparent !important;
+    padding-left: 1rem !important;
+}
+}
 
     .logoNif {
         height: 4em;
@@ -127,68 +201,5 @@
             display: block;
         }
     }
-
-
-
-/* 
-    .navbar {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        color: var(--color-orange);
-        justify-content: space-between;
-        padding: 1rem;
-        background: var(--color-purple);
-    }
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    .burger {
-        display: none;
-        flex-direction: column;
-        gap: 0.3rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    .burger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: var(--color-orange);
-        border-radius: 2px;
-    }
-
-    /* Responsive styles */
-    /* @media (max-width: 1023px) {
-        .nav-links {
-            display: none;
-        }
-        .burger {
-            display: flex;
-        }
-        .mobile-menu {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            position: absolute;
-            top: 60px;
-            right: 1rem;
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .mobile-menu {
-            display: none;
-        }
-    }  */
 
 </style>
