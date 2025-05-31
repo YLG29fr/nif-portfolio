@@ -1,7 +1,9 @@
 // react.ts
+import icon from '../../../assets/icons/react.svg';
 export const react = {
+  type: "frontend",
   name: "React",
-  icon: "/assets/icons/react.svg",
+  icon: icon,
   description: "Bibliothèque JavaScript pour construire des interfaces utilisateur réactives.",
   linkedProjects: ["projetReact"]
 }

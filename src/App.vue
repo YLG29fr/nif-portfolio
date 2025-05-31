@@ -12,7 +12,7 @@
   <NavBar></NavBar>
 
   <section class="section">
-    <HelloWorld msg="Vite + Vue" />
+    <!-- <HelloWorld msg="Vite + Vue" /> -->
     
     <HeroBanner/>
     

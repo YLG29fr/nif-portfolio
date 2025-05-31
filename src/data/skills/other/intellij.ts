@@ -1,7 +1,9 @@
 // intellij.ts
+import icon from '../../../assets/icons/intellij.svg';
 export const intellij = {
+  type: "other",
   name: "IntelliJ",
-  icon: "/assets/icons/intellij.svg",
+  icon: icon,
   description: "Environnement de développement intégré pour Java et autres langages.",
   linkedProjects: ["stageGemeny"]
 }

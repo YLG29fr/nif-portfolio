@@ -15,7 +15,7 @@
     </div>
 
     <!-- Footer avec les projets liés -->
-    <footer class="card-footer">
+    <!-- <footer class="card-footer">
       <span
         v-for="project in skill.linkedProjects"
         :key="project"
@@ -23,7 +23,7 @@
       >
         {{ project }}
       </span>
-    </footer>
+    </footer> -->
 
     <!-- Description à part, pour un futur tooltip -->
     <div class="is-sr-only" :id="`desc-${skill.name}`">
@@ -36,6 +36,7 @@
 // Props attend un objet skill comme merise.ts
 defineProps<{
   skill: {
+    type: string
     name: string
     icon: string
     description: string

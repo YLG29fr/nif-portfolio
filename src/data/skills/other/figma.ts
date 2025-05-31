@@ -1,7 +1,9 @@
 // figma.ts
+import icon from '../../../assets/icons/figma.svg';
 export const figma = {
+  type: "other",
   name: "Figma",
-  icon: "/assets/icons/figma.svg",
+  icon: icon,
   description: "Outil de conception d’interfaces collaboratif.",
   linkedProjects: ["portfolio"]
 }

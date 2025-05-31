@@ -1,7 +1,9 @@
 // vscode.ts
+import icon from '../../../assets/icons/vscode.svg';
 export const vscode = {
+  type: "other",
   name: "VSCode",
-  icon: "/assets/icons/vscode.svg",
+  icon: icon,
   description: "Éditeur de code moderne et extensible.",
   linkedProjects: ["tous"]
 }

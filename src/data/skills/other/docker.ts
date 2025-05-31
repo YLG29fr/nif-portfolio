@@ -1,7 +1,9 @@
 // docker.ts
+import icon from '../../../assets/icons/docker.svg';
 export const docker = {
+  type: "other",
   name: "Docker",
-  icon: "/assets/icons/docker.svg",
+  icon: icon,
   description: "Plateforme de conteneurisation pour déployer des applications facilement.",
   linkedProjects: ["apiProjet"]
 }

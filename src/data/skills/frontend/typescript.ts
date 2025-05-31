@@ -1,7 +1,9 @@
 // typescript.ts
+import icon from '../../../assets/icons/typescript.svg';
 export const typescript = {
+  type: "frontend",
   name: "TypeScript",
-  icon: "/assets/icons/typescript.svg",
+  icon: icon,
   description: "Sur-ensemble typé de JavaScript pour des applications plus robustes.",
   linkedProjects: ["portfolio", "dashboard"]
 }
