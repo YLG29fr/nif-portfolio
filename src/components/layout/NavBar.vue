@@ -62,27 +62,12 @@
                         {{ t('navBar:SKILLS_BUTTON') }}  
                     </a>
                     
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"
-                            href="#projets" >
-                            {{ t('navBar:PROJECTS_BUTTON') }}
-                        </a>
-                        
-                        <div class="navbar-dropdown custom-dropdown">
-                            <ul class="dropdown-list">
-                            <li>
-                                <a class="dropdown-link" href="#gemenyWeb">Interface Gemeny Web</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-link" href="#projet2">Projet 2</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-link" href="#projet3">Projet 3</a>
-                            </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <a class="navbar-item"
+                        href="#projets" >
+                        {{ t('navBar:PROJECTS_BUTTON') }}
+                    </a>
                 </div>
+
                 <!-- Bouton CTA -->
                 <div class="navbar-end">
                     
@@ -106,9 +91,8 @@
 
 <style scoped>
 .navbar {
-  background: linear-gradient(180deg, var(--color-purple) 90%, #ff9900 100%);
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
-  border-bottom: 1px solid #ff9900;
+    background: linear-gradient(180deg, var(--color-purple) 90%, var(--color-orange) 100%);
+    border-bottom: 1px solid var(--color-orange);
 }
 
 
@@ -116,20 +100,20 @@
 /* Style de base pour la liste du dropdown */
 .custom-dropdown .dropdown-list {
 
-  list-style: none;
-  margin: 0;
-  padding: 0.5em 0;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
 }
 
 .custom-dropdown .dropdown-link {
 
     white-space: nowrap;
-  color: inherit;
-  display: block;
-  padding: 0.5em 1.5em;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.2s;
+    color: inherit;
+    display: block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
 
 }
 
@@ -142,7 +126,7 @@
     bottom: 0.6em; 
     width: 0;
     height: 2px;
-    background: var(--color-orange, #ff9900); 
+    background: var(--color-orange); 
     transition: all 0.3s cubic-bezier(.4,0,.2,1);
     transform: translateX(-50%);
     z-index: 2;
@@ -159,7 +143,7 @@
         bottom: 0.3em;
         width: 0;
         height: 2px;
-        background: var(--color-orange, #ff9900);
+        background: var(--color-orange);
         transition: width 0.3s cubic-bezier(.4,0,.2,1);
         transform: translateX(-50%);
     }
@@ -171,7 +155,7 @@
     
     .custom-dropdown .dropdown-link:hover,
     .custom-dropdown .dropdown-link:focus {
-        color: var(--color-orange, #ff9900);
+        color: var(--color-orange);
         background: none;
     }
 }
