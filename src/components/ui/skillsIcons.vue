@@ -3,15 +3,10 @@
 </template>
 
 <script setup lang="ts">
+import type { Skill } from '../../types/skill'
 // Props attend un objet skill comme merise.ts
 defineProps<{
-  skill: {
-    type: string
-    name: string
-    icon: string
-    description: string
-    linkedProjects: string[]
-  }
+  skill: Skill
 }>()
 </script>
 

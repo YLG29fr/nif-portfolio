@@ -1,6 +1,6 @@
 <template>
   <div class="card" style="width: 18rem;">
-    <!-- Header avec le nom de la compétence -->
+    <!-- Header avec le nom du projet -->
     <header class="card-header">
       <p class="card-header-title">
         {{ project.name }}
@@ -15,20 +15,23 @@
     </div>
 
     <!-- Footer avec les projets liés -->
-    <!-- <footer class="card-footer">
+    <footer class="card-footer">
       <span
-        v-for="project in skill.linkedProjects"
-        :key="project"
+        v-for="skill in project.linkedSkills"
+        :key="skill.name"
         class="card-footer-item"
       >
-        {{ project }}
+        {{ skill.icon }}
       </span>
-    </footer> -->
+    </footer>
 
   </div>
 </template>
 
 <script setup lang="ts">
+
+import type { Skill } from '../../types/skill'
+
 // Props attend un objet projet comme portfolio
 defineProps<{
   project: {
@@ -37,7 +40,7 @@ defineProps<{
     description: string
     images: string[]
     tags: string[]
-    linkedSkills: string[]
+    linkedSkills: Skill[]
     context: string
     link: string
   }
