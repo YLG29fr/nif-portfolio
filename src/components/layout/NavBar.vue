@@ -66,6 +66,11 @@
                         href="#projets" >
                         {{ t('navBar:PROJECTS_BUTTON') }}
                     </a>
+
+                    <a class="navbar-item mr-4"
+                        href="#contact" >
+                        <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
+                    </a>
                 </div>
 
                 <!-- Bouton CTA -->
@@ -76,9 +81,9 @@
                             <button class="button" @click="changeLang">
                                 <strong>{{ t('navBar:OTHER_LANG') }}</strong>
                             </button>
-                            <button class="button">
+                            <!-- <button class="button">
                                 <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
-                            </button>
+                            </button> -->
                         </div>
                     
                     
@@ -90,10 +95,18 @@
 </template>
 
 <style scoped>
-.navbar {
+/* Pour le dark mode */
+:root[data-theme="dark"] .navbar {
     background: linear-gradient(180deg, var(--color-purple) 90%, var(--color-orange) 100%);
     border-bottom: 1px solid var(--color-orange);
 }
+
+/* Pour le light mode */
+:root[data-theme="light"] .navbar {
+    background: linear-gradient(180deg, var(--color-light-purple) 90%, var(--color-orange) 100%);
+    border-bottom: 1px solid var(--color-orange);
+}
+
 
 
 

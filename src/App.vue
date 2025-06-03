@@ -24,6 +24,11 @@
 </template>
 
 <style scoped>
-
+  [data-theme="dark"] .section{
+    background-color: var(--color-grey);
+  }
+  [data-theme="light"] .section{
+    background-color: var(--color-sable);
+  }
 </style>
 
