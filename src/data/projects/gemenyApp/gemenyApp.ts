@@ -1,12 +1,16 @@
 // projet gemenyApp.ts
+import type { Project } from '../../../types/project.ts';
 
 import { images } from '../../../assets/img/projects/gemenyApp/index.ts';
 
 import { skillsList } from '../../skills/index.ts';
 
-const linkedSkills = skillsList.filter (skill => skill.name.includes("React"));
+const linkedSkills = skillsList.filter(skill =>
+    ["React", "TypeScript", "CSS", "GitLab", "Figma", ].includes(skill.name)
+);
 
-export const gemenyApp = {
+export const gemenyApp: Project = {
+
     name: "Gemeny_Web",
     icon: images[0],
     images: images,

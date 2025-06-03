@@ -11,9 +11,8 @@
 </script>
 
 <template>
-  <h1 class="title" id="projects">{{ t('common:PROJECTS_TITLE') }}</h1>
-  <section>
-    <h1>{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
+  <section class="section">
+  <h1 class="title" id="projets">{{ t('common:PROJECTS_TITLE') }}</h1>
     <div class="is-flex is-flex-wrap-wrap">
       <div class="m-4" v-for="project in projectsList" :key="project.name">
         <projectCard :project="project"></projectCard>

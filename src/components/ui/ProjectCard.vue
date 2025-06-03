@@ -7,21 +7,24 @@
       </p>
     </header>
 
-    <!-- Image principale du skill -->
+    <!-- Image principale du projet -->
     <div class="card-image">
-      <figure class="image is-4by3">
-        <img :src="project.icon" :alt="project.name" />
+      <figure class="image is-4by4">
+        <a :href="project.link" target="_blank" rel="noopener">
+          <img :src="project.icon" :alt="project.name" />
+        </a>
       </figure>
+      <div class="card-footer-item"> {{ project.description }} </div>
     </div>
 
-    <!-- Footer avec les projets liés -->
+    <!-- Footer avec les compétences liés -->
     <footer class="card-footer">
-      <span
+        <span
         v-for="skill in project.linkedSkills"
         :key="skill.name"
         class="card-footer-item"
-      >
-        {{ skill.icon }}
+        >
+        <skillIcon :skill="skill" />
       </span>
     </footer>
 
@@ -30,19 +33,22 @@
 
 <script setup lang="ts">
 
-import type { Skill } from '../../types/skill'
+import type { Project } from '../../types/project'
+import skillIcon from '../ui/skillsIcons.vue'
 
 // Props attend un objet projet comme portfolio
 defineProps<{
-  project: {
-    name: string
-    icon: string
-    description: string
-    images: string[]
-    tags: string[]
-    linkedSkills: Skill[]
-    context: string
-    link: string
-  }
+  project: Project
 }>()
 </script>
+
+<style scoped>
+  [data-theme="light"] .card{
+        
+        background-color: var(--color-sable);
+    
+  }
+  /* .card-footer {
+    border: 1px solid var(--color-purple);
+  } */
+</style>

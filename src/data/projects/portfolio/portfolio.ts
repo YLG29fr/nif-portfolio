@@ -1,0 +1,22 @@
+// projet portfolio.ts
+import type { Project } from '../../../types/project.ts';
+
+import { images } from '../../../assets/img/projects/portfolio/index.ts';
+
+import { skillsList } from '../../skills/index.ts';
+
+const linkedSkills = skillsList.filter(skill =>
+    ["Vue", "TypeScript", "CSS", "GitHub", "Figma"].includes(skill.name)
+);
+
+export const portfolio: Project = {
+
+    name: "Portfolio",
+    icon: images[0],
+    images: images,
+    description: "Site web personnel pour afficher mes projets et mes informations personnelles.",
+    tags:["Frontend"],
+    linkedSkills: linkedSkills, 
+    context: "Portfolio personnel.",
+    link : "http://www.localhost:5173/"
+}
