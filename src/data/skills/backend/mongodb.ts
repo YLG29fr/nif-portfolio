@@ -1,5 +1,5 @@
 // mongodb.ts
-import icon from '../../../assets/icons/mongodb.svg';
+import icon from '../../../assets/icons/skills/mongodb.svg';
 export const mongodb = {
   type: "backend",
   name: "MongoDB",

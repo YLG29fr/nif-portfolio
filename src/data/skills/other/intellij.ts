@@ -1,5 +1,5 @@
 // intellij.ts
-import icon from '../../../assets/icons/intellij.svg';
+import icon from '../../../assets/icons/skills/intellij.svg';
 export const intellij = {
   type: "other",
   name: "IntelliJ",

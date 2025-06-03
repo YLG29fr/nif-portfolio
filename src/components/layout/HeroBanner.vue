@@ -12,7 +12,6 @@
 
   <section class="section" 
   >
-  <!-- style="margin-top: 30vh;" -->
 
     <h1>{{ t('common:TITLE') }}</h1>
     <h2>{{ t('common:SUB_TITLE') }}</h2>

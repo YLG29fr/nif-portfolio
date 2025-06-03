@@ -1,5 +1,5 @@
 // figma.ts
-import icon from '../../../assets/icons/figma.svg';
+import icon from '../../../assets/icons/skills/figma.svg';
 export const figma = {
   type: "other",
   name: "Figma",

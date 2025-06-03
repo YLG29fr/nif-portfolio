@@ -1,5 +1,5 @@
 // mariadb.ts
-import icon from '../../../assets/icons/mariadb.svg';
+import icon from '../../../assets/icons/skills/mariadb.svg';
 export const mariadb = {
   type: "backend",
   name: "MariaDB",

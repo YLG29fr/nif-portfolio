@@ -1,13 +1,11 @@
 <!-- src/components/layout/SkillsList.vue -->
 
 <script setup lang="ts">
-    import skillCard from '../ui/skillCard.vue';
-
+    import { skillsListByType } from '../../data/skills';
+    
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
-
-    import { skillsListByType } from '../../data/skills';
-import SkillsIcons from '../ui/skillsIcons.vue';
+    import SkillsIcons from '../ui/skillsIcons.vue';
 
 </script>
 

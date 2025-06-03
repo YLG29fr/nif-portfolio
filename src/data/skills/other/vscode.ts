@@ -1,5 +1,5 @@
 // vscode.ts
-import icon from '../../../assets/icons/vscode.svg';
+import icon from '../../../assets/icons/skills/vscode.svg';
 export const vscode = {
   type: "other",
   name: "VSCode",
