@@ -1,5 +1,5 @@
 // css.ts
-import icon from '../../../assets/icons/css.svg';
+import icon from '../../../assets/icons/skills/css.svg';
 export const css = {
   type: "frontend",
   name: "CSS",

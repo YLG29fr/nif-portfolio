@@ -1,5 +1,5 @@
 // nodejs.ts
-import icon from '../../../assets/icons/nodejs.svg';
+import icon from '../../../assets/icons/skills/nodejs.svg';
 export const nodejs = {
   type: "backend",
   name: "Node.js",

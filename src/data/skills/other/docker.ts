@@ -1,5 +1,5 @@
 // docker.ts
-import icon from '../../../assets/icons/docker.svg';
+import icon from '../../../assets/icons/skills/docker.svg';
 export const docker = {
   type: "other",
   name: "Docker",

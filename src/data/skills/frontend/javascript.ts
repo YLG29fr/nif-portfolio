@@ -1,5 +1,5 @@
 // javascript.ts
-import icon from '../../../assets/icons/javascript.svg';
+import icon from '../../../assets/icons/skills/javascript.svg';
 export const javascript = {
   type: "frontend",
   name: "JavaScript",

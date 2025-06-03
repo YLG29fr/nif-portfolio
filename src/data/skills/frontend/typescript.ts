@@ -1,5 +1,5 @@
 // typescript.ts
-import icon from '../../../assets/icons/typescript.svg';
+import icon from '../../../assets/icons/skills/typescript.svg';
 export const typescript = {
   type: "frontend",
   name: "TypeScript",

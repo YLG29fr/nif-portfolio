@@ -1,5 +1,5 @@
 // sass.ts
-import icon from '../../../assets/icons/sass.svg';
+import icon from '../../../assets/icons/skills/sass.svg';
 export const sass = {
   type: "frontend",
   name: "SASS",

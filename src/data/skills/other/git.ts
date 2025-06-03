@@ -1,5 +1,5 @@
 // git.ts
-import icon from '../../../assets/icons/git.svg';
+import icon from '../../../assets/icons/skills/git.svg';
 export const git = {
   type: "other",
   name: "Git",

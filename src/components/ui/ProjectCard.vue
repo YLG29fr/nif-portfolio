@@ -3,14 +3,14 @@
     <!-- Header avec le nom de la compétence -->
     <header class="card-header">
       <p class="card-header-title">
-        {{ skill.name }}
+        {{ project.name }}
       </p>
     </header>
 
     <!-- Image principale du skill -->
     <div class="card-image">
       <figure class="image is-4by3">
-        <img :src="skill.icon" :alt="skill.name" />
+        <img :src="project.icon" :alt="project.name" />
       </figure>
     </div>
 
@@ -25,22 +25,21 @@
       </span>
     </footer> -->
 
-    <!-- Description à part, pour un futur tooltip -->
-    <div class="is-sr-only" :id="`desc-${skill.name}`">
-      {{ skill.description }}
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// Props attend un objet skill comme merise.ts
+// Props attend un objet projet comme portfolio
 defineProps<{
-  skill: {
-    type: string
+  project: {
     name: string
     icon: string
     description: string
-    linkedProjects: string[]
+    images: string[]
+    tags: string[]
+    linkedSkills: string[]
+    context: string
+    link: string
   }
 }>()
 </script>

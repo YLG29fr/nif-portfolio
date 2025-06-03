@@ -1,5 +1,5 @@
 // vue.ts
-import icon from '../../../assets/icons/vue.svg';
+import icon from '../../../assets/icons/skills/vue.svg';
 export const vue = {
   type: "frontend",
   name: "Vue.js",

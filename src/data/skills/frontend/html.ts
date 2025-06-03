@@ -1,5 +1,5 @@
 // html.ts
-import icon from '../../../assets/icons/html.svg';
+import icon from '../../../assets/icons/skills/html.svg';
 export const html = {
   type: "frontend",
   name: "HTML",

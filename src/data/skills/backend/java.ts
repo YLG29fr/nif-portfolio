@@ -1,5 +1,5 @@
 // java.ts
-import icon from '../../../assets/icons/java.svg';
+import icon from '../../../assets/icons/skills/java.svg';
 export const java = {
   type: "backend",
   name: "Java",

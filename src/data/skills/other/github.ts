@@ -1,5 +1,5 @@
 // github.ts
-import icon from '../../../assets/icons/github.svg';
+import icon from '../../../assets/icons/skills/github.svg';
 export const github = {
   type: "other",
   name: "GitHub",
