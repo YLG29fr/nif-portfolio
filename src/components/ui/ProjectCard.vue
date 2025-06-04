@@ -24,7 +24,7 @@
         :key="skill.name"
         class="card-footer-item"
         >
-        <skillIcon :skill="skill" :desc="false" />
+        <skillIcon :skill="skill" :desc="false" :hoverable="false" />
       </span>
     </footer>
 

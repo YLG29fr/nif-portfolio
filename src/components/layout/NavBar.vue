@@ -37,7 +37,7 @@
         <nav class="navbar  is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
             <!-- Logo -->
             <div class="navbar-brand">
-                <a href="#">
+                <a href="#" id="logo">
                     <img :src="logo" alt="" class="logoNif">
                 </a>
                 <!-- Bouton burger -->
@@ -95,15 +95,23 @@
 </template>
 
 <style scoped>
+:root .navbar {
+      /* Effet glassmorphism */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Optionnel : bordure plus douce */
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+}
+
 /* Pour le dark mode */
 :root[data-theme="dark"] .navbar {
-    background: linear-gradient(180deg, var(--color-purple) 90%, var(--color-orange) 100%);
+    background: linear-gradient(180deg, var(--color-purple-transparent) 90%, var(--color-orange-transparent) 100%) ;
     border-bottom: 1px solid var(--color-orange);
 }
 
 /* Pour le light mode */
 :root[data-theme="light"] .navbar {
-    background: linear-gradient(180deg, var(--color-light-purple) 90%, var(--color-orange) 100%);
+    background: linear-gradient(180deg, var(--color-light-purple-transparent) 90%, var(--color-orange-transparent) 100%);
     border-bottom: 1px solid var(--color-orange);
 }
 

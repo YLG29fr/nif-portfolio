@@ -1,6 +1,12 @@
 <template>
 
-  <img :src="skill.icon" :alt="skill.name" class="skillIcon"/>
+  <img 
+    :src="skill.icon" 
+    :alt="skill.name" 
+    :class="{ hoverEffect: hoverable }"
+    class="skillIcon"
+  />
+
   <p class ="has-text-centered" v-if="desc"><b> {{ skill.name }} </b> </p>
 
 </template>
@@ -10,7 +16,8 @@ import type { Skill } from '../../types/skill'
 // Props attend un objet skill comme merise.ts
 defineProps<{
   skill: Skill,
-  desc: boolean
+  desc: boolean,
+  hoverable: boolean,
 }>()
 </script>
 
@@ -19,4 +26,12 @@ defineProps<{
     width: 60px;
     height: 60px;
   }
+  .hoverEffect {
+  transition: ease-in-out 0.5s;
+}
+.hoverEffect:hover {
+  filter: drop-shadow(0 0 2em var(--color-purple));
+  transition: ease-in-out 0.3s;
+  transform: scale(1.2);
+}
 </style>
