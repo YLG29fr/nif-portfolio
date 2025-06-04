@@ -4,6 +4,5 @@ export const typescript = {
   type: "frontend",
   name: "TypeScript",
   icon: icon,
-  description: "Sur-ensemble typé de JavaScript pour des applications plus robustes.",
-  linkedProjects: ["portfolio", "dashboard"]
+  description: "Sur-ensemble typé de JavaScript pour des applications plus robustes."
 }

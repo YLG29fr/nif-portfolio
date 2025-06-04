@@ -4,6 +4,5 @@ export const css = {
   type: "frontend",
   name: "CSS",
   icon: icon,
-  description: "Feuilles de style pour la mise en forme des pages web.",
-  linkedProjects: ["portfolio", "landingPage", "blog"]
+  description: "Feuilles de style pour la mise en forme des pages web."
 }

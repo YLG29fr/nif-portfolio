@@ -4,6 +4,5 @@ export const intellij = {
   type: "other",
   name: "IntelliJ",
   icon: icon,
-  description: "Environnement de développement intégré pour Java et autres langages.",
-  linkedProjects: ["stageGemeny"]
+  description: "Environnement de développement intégré pour Java et autres langages."
 }

@@ -4,6 +4,5 @@ export const vscode = {
   type: "other",
   name: "VSCode",
   icon: icon,
-  description: "Éditeur de code moderne et extensible.",
-  linkedProjects: ["tous"]
+  description: "Éditeur de code moderne et extensible."
 }

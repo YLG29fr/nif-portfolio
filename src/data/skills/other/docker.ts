@@ -4,6 +4,5 @@ export const docker = {
   type: "other",
   name: "Docker",
   icon: icon,
-  description: "Plateforme de conteneurisation pour déployer des applications facilement.",
-  linkedProjects: ["apiProjet"]
+  description: "Plateforme de conteneurisation pour déployer des applications facilement."
 }

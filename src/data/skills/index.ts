@@ -5,6 +5,7 @@ import { javascript } from "./frontend/javascript";
 import { typescript } from "./frontend/typescript";
 import { vue } from "./frontend/vue";
 import { react } from "./frontend/react";
+import { bulma } from "./frontend/bulma";
 
 import { nodejs } from "./backend/nodejs";
 import { java } from "./backend/java";
@@ -21,7 +22,7 @@ import { github } from "./other/github";
 import { docker } from "./other/docker";
 
 export const skillsList = [
-    html, css, javascript, typescript, vue,
+    html, css, javascript, typescript, vue, bulma,
     react, git, gitlab, java, intellij,
     springboot, nodejs, figma, sass, vscode,
     docker, github, mariadb, mongodb, 
@@ -29,5 +30,6 @@ export const skillsList = [
 export const skillsListByType = {
     frontend: skillsList.filter(skill => skill.type === "frontend"),
     backend: skillsList.filter(skill => skill.type === "backend"),
+    database: skillsList.filter(skill => skill.type === "database"),
     other: skillsList.filter(skill => skill.type === "other")
 }

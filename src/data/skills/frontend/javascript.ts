@@ -4,6 +4,5 @@ export const javascript = {
   type: "frontend",
   name: "JavaScript",
   icon: icon,
-  description: "Langage de programmation pour rendre les pages web interactives.",
-  linkedProjects: ["portfolio", "dashboard"]
+  description: "Langage de programmation pour rendre les pages web interactives."
 }

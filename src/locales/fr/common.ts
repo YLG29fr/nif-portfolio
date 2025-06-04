@@ -5,6 +5,7 @@ export default {
     SKILLS_TITLE:"Compétences",
     SKILLS_FRONTEND_TITLE:"Front-end",
     SKILLS_BACKEND_TITLE:"Back-end",
+    SKILLS_DATABASE_TITLE:"Base de données",
     SKILLS_OTHER_TITLE:"Autres",
 
     PROJECTS_TITLE:"Projets",

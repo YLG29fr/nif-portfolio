@@ -4,6 +4,5 @@ export const git = {
   type: "other",
   name: "Git",
   icon: icon,
-  description: "Système de gestion de versions pour le code source.",
-  linkedProjects: ["tous"]
+  description: "Système de gestion de versions pour le code source."
 }

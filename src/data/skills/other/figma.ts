@@ -4,6 +4,5 @@ export const figma = {
   type: "other",
   name: "Figma",
   icon: icon,
-  description: "Outil de conception d’interfaces collaboratif.",
-  linkedProjects: ["portfolio"]
+  description: "Outil de conception d’interfaces collaboratif."
 }

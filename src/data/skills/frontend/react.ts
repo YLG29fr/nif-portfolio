@@ -4,6 +4,5 @@ export const react = {
   type: "frontend",
   name: "React",
   icon: icon,
-  description: "Bibliothèque JavaScript pour construire des interfaces utilisateur réactives.",
-  linkedProjects: ["projetReact"]
+  description: "Bibliothèque JavaScript pour construire des interfaces utilisateur réactives."
 }

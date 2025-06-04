@@ -63,7 +63,7 @@
                     </a>
                     
                     <a class="navbar-item"
-                        href="#projets" >
+                        href="#projects" >
                         {{ t('navBar:PROJECTS_BUTTON') }}
                     </a>
 

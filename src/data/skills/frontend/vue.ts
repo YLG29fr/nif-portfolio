@@ -4,6 +4,5 @@ export const vue = {
   type: "frontend",
   name: "Vue",
   icon: icon,
-  description: "Framework JavaScript progressif pour construire des interfaces utilisateur.",
-  linkedProjects: ["portfolio"]
+  description: "Framework JavaScript progressif pour construire des interfaces utilisateur."
 }

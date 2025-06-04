@@ -1,9 +1,8 @@
 // mongodb.ts
 import icon from '../../../assets/icons/skills/mongodb.svg';
 export const mongodb = {
-  type: "backend",
+  type: "database",
   name: "MongoDB",
   icon: icon,
-  description: "Base de données NoSQL orientée documents.",
-  linkedProjects: ["apiProjet"]
+  description: "Base de données NoSQL orientée documents."
 }
