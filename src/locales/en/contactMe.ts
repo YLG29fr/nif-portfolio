@@ -11,4 +11,7 @@ export default {
     MESSAGE : "Message",
     MESSAGE_FILLER : "Your message",
     SEND : "Send",
+
+    SUCCESS_MESSAGE : "Your message has been sent successfully !",
+    ERROR_MESSAGE : "An error occurred while sending your message.",
 }

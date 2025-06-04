@@ -31,6 +31,8 @@
                 <button class="button is-link" type="submit">{{ t('contactMe:SEND') }}</button>
             </div>
         </div>
+        <div v-if="error">{{ t('contactMe:ERROR_MESSAGE') }}</div>
+        <div v-if="success">{{ t('contactMe:SUCCESS_MESSAGE') }}</div>
     </form>
 </template>
 
@@ -41,6 +43,8 @@ const { t } = useTranslation();
 
 import { reactive } from 'vue';
 
+import { useEmailJs } from '../../lib/useEmailJs';
+
 const form = reactive({
     name: '',
     email: '',
@@ -48,12 +52,25 @@ const form = reactive({
     message: ''
 });
 
-function handleSubmit() {
-    console.log('Formulaire envoyé', form);
+const { sendEmail, error, success } = useEmailJs();
+async function handleSubmit() {
+    await sendEmail({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message
+});
+if (success.value) {
+    console.info(t('contactMe:SUCCESS_MESSAGE'));
     form.name = '';
     form.email = '';
     form.subject = '';
     form.message = '';
+}
+if (error.value) {
+    console.error(t('contactMe:ERROR_MESSAGE'));
+}
+
 }
 
 </script>
