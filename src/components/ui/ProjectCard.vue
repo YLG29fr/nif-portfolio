@@ -34,7 +34,7 @@
 <script setup lang="ts">
 
 import type { Project } from '../../types/project'
-import skillIcon from '../ui/skillsIcons.vue'
+import skillIcon from './SkillsIcons.vue'
 
 // Props attend un objet projet comme portfolio
 defineProps<{
@@ -48,7 +48,5 @@ defineProps<{
         background-color: var(--color-sable);
     
   }
-  /* .card-footer {
-    border: 1px solid var(--color-purple);
-  } */
+
 </style>

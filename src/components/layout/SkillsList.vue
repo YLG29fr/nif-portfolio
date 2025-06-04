@@ -5,7 +5,8 @@
     
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
-    import SkillsIcons from '../ui/skillsIcons.vue';
+    
+    import SkillsIcons from '../ui/SkillsIcons.vue';
 
 </script>
 
@@ -16,28 +17,28 @@
     <h1 class="is-size-4">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
     <div class="is-flex is-flex-wrap-wrap">
       <div class="m-4" v-for="skill in skillsListByType.frontend" :key="skill.name">
-        <skillsIcons :skill="skill" :desc="true" />
+        <SkillsIcons :skill="skill" :desc="true" />
       </div>
     </div>
   
     <h1 class="is-size-4">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
     <div class="is-flex is-flex-wrap-wrap">
       <div class="m-4" v-for="skill in skillsListByType.backend" :key="skill.name">
-        <skillsIcons :skill="skill" :desc="true" />
+        <SkillsIcons :skill="skill" :desc="true" />
       </div>
     </div>
 
         <h1 class="is-size-4">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
     <div class="is-flex is-flex-wrap-wrap">
       <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
-        <skillsIcons :skill="skill" :desc="true" />
+        <SkillsIcons :skill="skill" :desc="true" />
       </div>
     </div>
 
     <h1 class="is-size-4">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
     <div class="is-flex is-flex-wrap-wrap">
       <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
-        <skillsIcons :skill="skill" :desc="true" />
+        <SkillsIcons :skill="skill" :desc="true" />
       </div>
     </div>
   </section>

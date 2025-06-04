@@ -8,7 +8,7 @@
     import i18next , { changeLanguage } from 'i18next';
     
     import logo from '../../assets/logo.png';
-    import toggleDarkMode from '../ui/toggleDarkMode.vue';
+    import ToggleDarkMode from '../ui/ToggleDarkMode.vue';
 
     
     const {t} = useTranslation('navBar');
@@ -77,7 +77,7 @@
                 <div class="navbar-end">
                     
                         <div class="buttons">
-                            <toggleDarkMode/>
+                            <ToggleDarkMode/>
                             <button class="button" @click="changeLang">
                                 <strong>{{ t('navBar:OTHER_LANG') }}</strong>
                             </button>

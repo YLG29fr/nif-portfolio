@@ -6,7 +6,7 @@ import { images } from '../../../assets/img/projects/gemenyApp/index.ts';
 import { skillsList } from '../../skills/index.ts';
 
 const linkedSkills = skillsList.filter(skill =>
-    ["React", "TypeScript", "CSS", "GitLab", "Figma", ].includes(skill.name)
+    ["React", "TypeScript", "CSS", "GitLab", "Figma" ].includes(skill.name)
 );
 
 export const gemenyApp: Project = {
