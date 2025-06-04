@@ -6,7 +6,7 @@
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
     
-    import SkillsIcons from '../ui/SkillsIcons.vue';
+    import SkillsIcons from '../ui/skillsIcons.vue';
 
 </script>
 

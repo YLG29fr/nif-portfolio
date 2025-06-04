@@ -34,7 +34,7 @@
 <script setup lang="ts">
 
 import type { Project } from '../../types/project'
-import skillIcon from './SkillsIcons.vue'
+import skillIcon from './skillsIcons.vue'
 
 // Props attend un objet projet comme portfolio
 defineProps<{
