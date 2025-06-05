@@ -4,5 +4,11 @@ export const vscode = {
   type: "other",
   name: "VSCode",
   icon: icon,
-  description: "Éditeur de code moderne et extensible."
+}
+
+export const vscode_EN = {
+    description : "Modern code editor with extensibility.",
+}
+export const vscode_FR = {
+    description : "Editeur de code moderne et extensible.",
 }

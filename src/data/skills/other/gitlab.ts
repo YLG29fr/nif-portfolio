@@ -4,5 +4,11 @@ export const gitlab = {
   type: "other",
   name: "GitLab",
   icon: icon,
-  description: "Plateforme DevOps pour héberger du code et gérer des projets."
+}
+
+export const gitlab_EN = {
+    description : "DevOps platform to host code and manage projects.",
+}
+export const gitlab_FR = {
+    description : "Plateforme DevOps pour heberger du code et gerer des projets.",
 }

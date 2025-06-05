@@ -1,3 +1,4 @@
+<!-- src/components/ui/ToggleDarkMode.vue -->
 <script setup>
     import { ref, watch } from 'vue';
 

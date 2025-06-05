@@ -4,5 +4,11 @@ export const react = {
   type: "frontend",
   name: "React",
   icon: icon,
-  description: "Bibliothèque JavaScript pour construire des interfaces utilisateur réactives."
+}
+
+export const react_EN = {
+    description : "JavaScript library for building interactive user interfaces.",
+}
+export const react_FR = {
+    description : "Bibliothèque JavaScript pour construire des interfaces utilisateur réactives.",
 }

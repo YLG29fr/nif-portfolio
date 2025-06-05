@@ -1,3 +1,4 @@
+<!-- src/components/ui/ProjectCard.vue -->
 <template>
   <div class="card" style="width: 18rem;">
     <!-- Header avec le nom du projet -->

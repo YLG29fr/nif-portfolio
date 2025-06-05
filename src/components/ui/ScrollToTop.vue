@@ -1,3 +1,4 @@
+<!-- src/components/ui/ScrollToTop.vue -->
 <template>
 
 <a href="#" class="scroll-to-top">

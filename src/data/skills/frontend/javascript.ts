@@ -4,5 +4,11 @@ export const javascript = {
   type: "frontend",
   name: "JavaScript",
   icon: icon,
-  description: "Langage de programmation pour rendre les pages web interactives."
+}
+
+export const javascript_EN = {
+    description : "Programming language for making web pages interactive.",
+}
+export const javascript_FR = {
+    description : "Langage de programmation pour rendre les pages web interactives.",
 }

@@ -4,5 +4,11 @@ export const html = {
   type: "frontend",
   name: "HTML",
   icon: icon,
-  description: "Langage de balisage pour structurer le web."
+}
+
+export const html_EN = {
+    description : "Language for structuring the web.",
+}
+export const html_FR = {
+    description : "Langage pour structurer le web.",
 }

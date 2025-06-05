@@ -5,6 +5,7 @@ import common from './common';
 import errors from './errors';
 import contactMe from './contactMe';
 import projects from './projects';
+import skills from './skills';
 
 export default {
     common, 
@@ -13,5 +14,6 @@ export default {
     navBar,
     altDesc,
     contactMe,
-    projects
+    projects,
+    skills,
 };

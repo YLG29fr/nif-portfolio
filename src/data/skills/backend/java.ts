@@ -4,5 +4,11 @@ export const java = {
   type: "backend",
   name: "Java",
   icon: icon,
-  description: "Langage de programmation orienté objet utilisé pour le développement back-end."
+}
+
+export const java_EN = {
+    description : "Object-oriented programming language used for back-end development.",
+}
+export const java_FR = {
+    description : "Langage de programmation orienté objet utilisé pour le développement back-end.",
 }

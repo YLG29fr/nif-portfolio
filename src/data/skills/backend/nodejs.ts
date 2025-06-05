@@ -2,7 +2,13 @@
 import icon from '../../../assets/icons/skills/nodejs.svg';
 export const nodejs = {
   type: "backend",
-  name: "Node.js",
+  name: "NodeJS",
   icon: icon,
-  description: "Environnement d’exécution JavaScript côté serveur."
+}
+
+export const nodejs_EN = {
+    description : "Execution environment for JavaScript on the server.",
+}
+export const nodejs_FR = {
+    description : "Environnement d’exécution JavaScript sur le serveur.",
 }

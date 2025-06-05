@@ -4,5 +4,11 @@ export const bulma= {
   type: "frontend",
   name: "Bulma",
   icon: icon,
-  description: "Framework CSS moderne, responsif et modulable."
+}
+
+export const bulma_EN = {
+    description : "Modern CSS framework, responsive and modular.",
+}
+export const bulma_FR = {
+    description : "Framework CSS moderne, responsive et modulaire.",
 }

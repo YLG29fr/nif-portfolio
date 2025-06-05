@@ -4,5 +4,11 @@ export const mongodb = {
   type: "database",
   name: "MongoDB",
   icon: icon,
-  description: "Base de données NoSQL orientée documents."
+}
+
+export const mongodb_EN = {
+    description : "NoSQL document database.",
+}
+export const mongodb_FR = {
+    description : "Base de données NoSQL orientée documents.",
 }

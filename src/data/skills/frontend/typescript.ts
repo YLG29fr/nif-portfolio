@@ -4,5 +4,11 @@ export const typescript = {
   type: "frontend",
   name: "TypeScript",
   icon: icon,
-  description: "Sur-ensemble typé de JavaScript pour des applications plus robustes."
+}
+
+export const typescript_EN = {
+    description : "Superset typed of JavaScript for more robust applications.",
+}
+export const typescript_FR = {
+    description : "Superset typé de JavaScript pour des applications plus robustes.",
 }

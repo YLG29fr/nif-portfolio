@@ -4,5 +4,11 @@ export const springboot = {
   type: "backend",
   name: "SpringBoot",
   icon: icon,
-  description: "Framework Java pour créer des applications web robustes rapidement."
+}
+
+export const springboot_EN = {
+    description : "Framework Java pour créer des applications web robustes rapidement.",
+}
+export const springboot_FR = {
+    description : "Framework Java pour créer des applications web robustes rapidement.",
 }

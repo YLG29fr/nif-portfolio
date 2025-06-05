@@ -4,5 +4,11 @@ export const docker = {
   type: "other",
   name: "Docker",
   icon: icon,
-  description: "Plateforme de conteneurisation pour déployer des applications facilement."
+}
+
+export const docker_EN = {
+    description : "Platform for containerization to deploy applications easily.",
+}
+export const docker_FR = {
+    description : "Plateforme de conteneurisation pour déployer des applications facilement.",
 }

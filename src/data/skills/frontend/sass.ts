@@ -4,5 +4,11 @@ export const sass = {
   type: "frontend",
   name: "SASS",
   icon: icon,
-  description: "Préprocesseur CSS pour écrire des styles plus puissants et maintenables."
+}
+
+export const sass_EN = {
+    description : "Preprocessor for CSS to write more powerful and maintainable styles.",
+}
+export const sass_FR = {
+    description : "Préprocesseur CSS pour écrire des styles plus puissants et maintenables.",
 }

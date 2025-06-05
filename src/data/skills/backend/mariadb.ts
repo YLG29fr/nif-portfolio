@@ -4,5 +4,11 @@ export const mariadb = {
   type: "database",
   name: "MariaDB",
   icon: icon,
-  description: "Base de données relationnelle open source."
+}
+
+export const mariadb_EN = {
+    description : "Open source relational database.",
+}
+export const mariadb_FR = {
+    description : "Base de données relationnelle open source.",
 }
