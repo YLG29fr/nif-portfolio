@@ -3,7 +3,7 @@
     <!-- Header avec le nom du projet -->
     <header class="card-header">
       <p class="card-header-title">
-        {{ project.name }}
+        {{ t(`${project.name}.title`) }}
       </p>
     </header>
 
@@ -14,7 +14,7 @@
           <img :src="project.icon" :alt="project.name" />
         </a>
       </figure>
-      <div class="card-footer-item"> {{ project.description }} </div>
+      <div class="card-footer-item"> {{ t(`${project.name}.description`) }} </div>
     </div>
 
     <!-- Footer avec les compétences liés -->
@@ -36,7 +36,11 @@
 import type { Project } from '../../types/project'
 import skillIcon from './skillsIcons.vue'
 
-// Props attend un objet projet comme portfolio
+import { useTranslation } from 'i18next-vue';
+const { t } = useTranslation('projects');
+
+
+// Props attend un objet Projet comme portfolio
 defineProps<{
   project: Project
 }>()

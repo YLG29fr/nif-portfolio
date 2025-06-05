@@ -1,6 +1,6 @@
-import { gemenyApp } from "./gemenyApp/gemenyApp"
-import { gemenyAuth } from "./gemenyAuth/gemenyAuth"
-import { portfolio } from "./portfolio/portfolio"
+import { gemenyApp } from "./gemenyApp"
+import { gemenyAuth } from "./gemenyAuth"
+import { portfolio } from "./portfolio"
 
 
 export const projectsList = [
