@@ -2,7 +2,7 @@
 
 <script setup lang="ts">
 
-  import logo from '../../assets/logo.png'
+  // import logo from '../../assets/logo.png'
 
   import {useTranslation} from 'i18next-vue'
   const {t} = useTranslation();
