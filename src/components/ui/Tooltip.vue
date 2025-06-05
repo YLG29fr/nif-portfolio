@@ -63,7 +63,7 @@ watch(show, async (val) => {
 }
 .tooltip-content {
     position: absolute;
-    bottom: 110%;
+    bottom: 120%;
     left: 50%;
     background: #222;
     color: #fff;

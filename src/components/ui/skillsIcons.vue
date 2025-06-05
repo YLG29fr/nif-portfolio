@@ -33,13 +33,19 @@ defineProps<{
   .skillIcon {
     width: 60px;
     height: 60px;
+    transition: filter 0.3s, transform 0.3s;
   }
   .hoverEffect {
-  transition: ease-in-out 0.5s;
+    transition: filter 0.3s, transform 0.3s;
 }
 .hoverEffect:hover {
-  filter: drop-shadow(0 0 2em var(--color-purple));
-  transition: ease-in-out 0.3s;
-  transform: scale(1.2);
+  transform: scale(1.3) rotate(-4deg);
+}
+
+[data-theme="dark"] .hoverEffect:hover {
+  filter: drop-shadow(0 0 2em var(--color-light-purple));
+}
+[data-theme="light"] .hoverEffect:hover {
+  filter: drop-shadow(0 0 2em var(--color-dark-orange));
 }
 </style>
