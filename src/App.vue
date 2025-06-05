@@ -5,7 +5,8 @@
   import AboutMe from './components/layout/AboutMe.vue'
   import SkillsList from './components/layout/SkillsList.vue';
   import ProjectsSection from './components/layout/ProjectsSection.vue';
-  import ContactSection from './components/layout/ContactSection.vue'
+  import ContactSection from './components/layout/ContactSection.vue';
+  import ScrollToTop from './components/ui/ScrollToTop.vue';
 
 </script>
 
@@ -18,6 +19,7 @@
   <SkillsList />
   <ProjectsSection />
   <ContactSection />
+  <ScrollToTop />
 
 </template>
 
