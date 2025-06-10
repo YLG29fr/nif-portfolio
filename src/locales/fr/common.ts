@@ -9,4 +9,8 @@ export default {
     SKILLS_OTHER_TITLE:"Autres",
 
     PROJECTS_TITLE:"Projets",
+
+    FOOTER_TEXT:"Tous droits reservés",
+    FOOTER_LEGAL_TEXT:"Mentions légales",
+    FOOTER_SITE_PLAN:"Plan du site",
 }

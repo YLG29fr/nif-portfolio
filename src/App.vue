@@ -7,6 +7,7 @@
   import ProjectsSection from './components/layout/ProjectsSection.vue';
   import ContactSection from './components/layout/ContactSection.vue';
   import ScrollToTop from './components/ui/ScrollToTop.vue';
+  import MyFooter from './components/layout/MyFooter.vue';
 
 </script>
 
@@ -20,6 +21,7 @@
   <ProjectsSection />
   <ContactSection />
   <ScrollToTop />
+  <MyFooter />
 
 </template>
 
