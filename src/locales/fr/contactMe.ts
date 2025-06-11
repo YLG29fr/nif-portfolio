@@ -1,7 +1,8 @@
 export default {
     TITLE : "Contactez moi",
-    SUBTITLE : "Si vous avez des questions ou souhaitez travailler ensemble, n'hésitez pas a me contacter.",
-    CTA : "Contactez moi via le formulaire ou sur Linkedin : ",
+    CTA : "Si vous avez des questions ou souhaitez travailler ensemble, n'hésitez pas a me contacter.",
+    FORM : "Contactez moi via le formulaire : ",
+    SOCIAL_NETWORK : "Ou via mes réseaux sociaux : ",
     NAME : "Nom",
     NAME_FILLER : "Votre nom",
     EMAIL : "Email",

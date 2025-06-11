@@ -7,15 +7,15 @@
 
 <template>
     <footer class="footer">
-        <div class=" mx-6 is-flex is-justify-content-space-between">
-            <ContactLinks />
+        <div class=" mx-6 is-flex is-justify-content-center">
+            
             <div>
                 <p> ©<strong>Yoann Le Goff {{ new Date().getFullYear() }}</strong> - {{ t('common:FOOTER_TEXT') }}</p>
                 <div class="is-flex is-justify-content-space-evenly">
                     <a href="" class=""> {{ t('common:FOOTER_LEGAL_TEXT') }}</a> - <a href="" class=""> {{ t('common:FOOTER_SITE_PLAN') }} </a>
                 </div>
             </div>
-            <div></div>
+        
         </div>
     </footer>
 </template>

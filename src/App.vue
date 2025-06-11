@@ -14,7 +14,7 @@
 
 <template>
 
-  <NavBar></NavBar>
+  <NavBar />
   <HeroBanner />
   <AboutMe />
   <SkillsList />
