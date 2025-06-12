@@ -2,21 +2,25 @@
 
 <script setup lang="ts">
 
-  // import logo from '../../assets/logo.png'
-
   import {useTranslation} from 'i18next-vue'
   const {t} = useTranslation();
+
 
 </script>
 <template>
 
-  <section class="section" 
-  >
+  <section class="section" >
 
-    <h1>{{ t('common:TITLE') }}</h1>
-    <h2>{{ t('common:SUB_TITLE') }}</h2>
-    
-    <!-- <img :src="logo" alt="mon logo Renard" class="hoverEffect"/> -->
+    <div class="columns">
+
+      <div class="column has-text-centered">
+        <h1>{{ t('common:TITLE') }}</h1>
+        <h2>{{ t('common:SUB_TITLE') }}</h2>
+      </div>
+      
+
+    </div>
+      
   </section>
 
 </template>

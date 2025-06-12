@@ -13,19 +13,23 @@ import { springboot } from "./backend/springboot";
 import { mariadb } from "./backend/mariadb";
 import { mongodb } from "./backend/mongodb";
 
-import { figma } from "./other/figma";
-import { intellij } from "./other/intellij";
-import { vscode } from "./other/vscode";
 import { git } from "./other/git";
 import { gitlab } from "./other/gitlab";
 import { github } from "./other/github";
+import { figma } from "./other/figma";
+import { intellij } from "./other/intellij";
+import { vscode } from "./other/vscode";
 import { docker } from "./other/docker";
 
 export const skillsList = [
-    html, css, javascript, typescript, vue, bulma,
-    react, git, gitlab, java, intellij,
-    springboot, nodejs, figma, sass, vscode,
-    docker, github, mariadb, mongodb, 
+    html, css, sass, bulma,
+    javascript, typescript,
+    vue, react, 
+    git, gitlab, github,
+    java,springboot, nodejs,
+    mariadb, mongodb,
+    intellij, vscode,
+    docker,  figma,
 ]
 export const skillsListByType = {
     frontend: skillsList.filter(skill => skill.type === "frontend"),

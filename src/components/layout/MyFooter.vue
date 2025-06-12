@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import ContactLinks from '../ui/ContactLinks.vue';
     import { useTranslation } from 'i18next-vue';
     const { t } = useTranslation();
 
