@@ -4,7 +4,7 @@
     const {t} = useTranslation();
 
     import ContactForm from '../ui/ContactForm.vue';
-import ContactLinks from '../ui/ContactLinks.vue';
+    import ContactLinks from '../ui/ContactLinks.vue';
 
 </script>
 

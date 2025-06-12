@@ -11,9 +11,9 @@
     <!-- Image principale du projet -->
     <div class="card-image">
       <figure class="image is-4by4">
-        <a :href="project.link" target="_blank" rel="noopener">
+        <router-link :to="`/projet/${project.name.toLowerCase()}`" target="_blank" rel="noopener">
           <img :src="project.icon" :alt="project.name" />
-        </a>
+        </router-link>
       </figure>
       <div class="card-footer-item"> {{ t(`${project.name}.description`) }} </div>
     </div>

@@ -18,6 +18,9 @@
       <div class="m-4" v-for="project in projectsList" :key="project.name">
         <ProjectCard :project="project"></ProjectCard>
       </div>
+      <router-link to="/projet/">
+        <button class="button"> +++ </button>
+      </router-link>
     </div>
   </section>
 </template>
