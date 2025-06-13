@@ -15,14 +15,21 @@
 <template>
 
     <NavBar />
-    <HeroBanner />
-    <AboutMe />
-    <SkillsList />
-    <ProjectsSection />
-    <ContactSection />
-    <ScrollToTop />
+    <div class="main-container mx-auto">
+        <HeroBanner />
+        <AboutMe />
+        <SkillsList />
+        <ProjectsSection />
+        <ContactSection />
+        <ScrollToTop />
+    </div>
     <MyFooter />
 
 </template>
 
+<style scoped>
+    .main-container{
+        max-width: 1600px;
+    }
+</style>
 

@@ -11,7 +11,7 @@
     <!-- Image principale du projet -->
     <div class="card-image">
       <figure class="image is-4by4">
-        <router-link :to="`/projet/${project.name.toLowerCase()}`" target="_blank" rel="noopener">
+        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener">
           <img :src="project.icon" :alt="project.name" />
         </router-link>
       </figure>

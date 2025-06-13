@@ -1,13 +1,19 @@
 <script setup lang="ts">
+    import { computed } from 'vue'
     import { useRoute } from 'vue-router'
     import { projectsList } from '../../data/projects'
-    // import router from '../../router'
+
 
     const route = useRoute()
 
-    const projectName = route.params.name as string | undefined
+    const projectName = computed(
+        () => (route.params.name as string)?.toLocaleLowerCase()
+    )
 
-    const currentProject = projectsList.find(project => project.name.toLocaleLowerCase() === projectName)
+    const currentProject = computed(
+        () => projectsList.find(
+            project => project.name.toLocaleLowerCase() === projectName.value)
+        )
 
 </script>
 
@@ -58,7 +64,7 @@
         <h1>Liste des projets</h1>
         <ul>
             <li v-for="project in projectsList" :key="project.name">
-            <router-link :to="`/projet/${project.name}`">
+            <router-link :to="`/projet/${project.name.toLowerCase()}`">
                 {{ project.name }}
             </router-link>
             </li>
