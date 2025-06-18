@@ -2,9 +2,26 @@
 <script setup>
     import { ref, watch } from 'vue';
 
+    // Clé pour le localStorage
+  const STORAGE_KEY = 'theme';
+
     // Détection de la préférence du navigateur
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const selectedTheme = ref(prefersDarkScheme.matches ? 'dark' : 'light');
+  
+    // Fonction pour obtenir le thème sauvegardé
+    function getSavedTheme() {
+      return localStorage.getItem(STORAGE_KEY);
+    }
+
+    // Fonction pour enregistrer le thème
+  function setStoredTheme(theme) {
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+
+  // Initialisation : thème stocké ou préférence système
+  const selectedTheme = ref(
+    getSavedTheme() || (prefersDarkScheme.matches ? 'dark' : 'light')
+  );
 
     // Appliquer le thème initial
     document.documentElement.setAttribute('data-theme', selectedTheme.value);
@@ -12,11 +29,14 @@
     // Mettre à jour le thème quand selectedTheme change
     watch(selectedTheme, (newTheme) => {
         document.documentElement.setAttribute('data-theme', newTheme);
+        setStoredTheme(newTheme);
     });
 
-    // (Optionnel) Écouter les changements de préférence du système en temps réel
+    // Écouter les changements de préférence du système en temps réel
     prefersDarkScheme.addEventListener('change', (event) => {
+      if(!getSavedTheme()){
         selectedTheme.value = event.matches ? 'dark' : 'light';
+      }
     });
 </script>
 

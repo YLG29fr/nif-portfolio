@@ -3,14 +3,16 @@
 <script setup lang="ts">
 
     import { ref, computed } from 'vue';
-
     import {useTranslation} from 'i18next-vue'
     import i18next , { changeLanguage } from 'i18next';
     
+    import { useRoute } from 'vue-router'
+
     import logo from '../../assets/logo.png';
     import ToggleDarkMode from '../ui/ToggleDarkMode.vue';
 
-    
+    const route = useRoute()
+
     const {t} = useTranslation('navBar');
 
     const isBurgerActive = ref(false);
@@ -29,6 +31,8 @@
         changeLanguage(nextLang.value);
     }
 
+    const currentPage = computed(() => route.name)
+
 </script>
 
 <template>
@@ -37,9 +41,16 @@
         <nav class="navbar  is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
             <!-- Logo -->
             <div class="navbar-brand">
-                <a href="#" id="logo">
+
+                <!-- logo sur HomePage -->
+                <a href="#" id="logo" v-if="!currentPage">
                     <img :src="logo" alt="" class="logoNif">
                 </a>
+                <!-- logo sur autres pages - utilisation de navigation programmatique-->
+                <a @click="$router.go(-1)" id="logo" v-else>
+                    <img :src="logo" alt="" class="logoNif">
+                </a>
+                
                 <!-- Bouton burger -->
                 <button @click="toggleMenu" :class="{'is-active': isBurgerActive}"
                 class='navbar-burger is-dark' aria-label="menu" aria-expanded="false" data-target="navbar" >
@@ -50,8 +61,8 @@
                 </button>
             </div>
             <!-- Menu -->
-            <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}">
-                <div class="navbar-start ml-6">
+            <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}" >
+                <div class="navbar-start ml-6" v-if="!currentPage">
                     <a class="navbar-item"
                         href="#aboutMe" >
                         {{ t('navBar:ABOUT_ME_BUTTON') }}    
@@ -70,6 +81,12 @@
                     <a class="navbar-item mr-4"
                         href="#contact" >
                         <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
+                    </a>
+                </div>
+                <div class="navbar-start ml-6" v-else>
+                    <a class="navbar-item"
+                        @click="$router.go(-1)" >
+                        {{ t('navBar:BACK_TO_HOME') }}
                     </a>
                 </div>
 

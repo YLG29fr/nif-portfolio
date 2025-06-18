@@ -1,8 +1,11 @@
 <script setup lang="ts">
     import { computed } from 'vue'
     import { useRoute } from 'vue-router'
+    import NavBar from '../../components/layout/NavBar.vue'
     import { projectsList } from '../../data/projects'
+    import { useTranslation } from 'i18next-vue'
 
+    const {t} = useTranslation()
 
     const route = useRoute()
 
@@ -18,14 +21,15 @@
 </script>
 
 <template>
-    <section class="section">
+    <section class="section main-container mx-auto">
 
-        <nav>
-            <router-link to="/">Accueil</router-link>
-        </nav>
+        <NavBar>
+            <router-link to="/">{{ t('navBar:BACK_TO_HOME') }}</router-link>
+        </NavBar>
 
     <div v-if="currentProject">
-        <h1>Projet : {{ currentProject.name }}</h1>
+        <h1 class="title"> {{ currentProject.name }}</h1>
+
     
         <!-- Images -->
         <div v-if="currentProject.images && currentProject.images.length">
@@ -40,7 +44,8 @@
         </div>
     
     <!-- Compétences -->
-    <div v-if="currentProject.linkedSkills && currentProject.linkedSkills.length">
+    <div v-if="currentProject.linkedSkills && currentProject.linkedSkills.length"   
+     style="height: 50rem;">
         <h2>Compétences</h2>
         <ul>
         <li v-for="skill in currentProject.linkedSkills" :key="skill.name">
@@ -52,7 +57,6 @@
     
     <!-- Lien -->
     <div v-if="currentProject.link">
-        <h2>Lien</h2>
         <a :href="currentProject.link" target="_blank" rel="noopener">
         Voir le projet en ligne
         </a>
@@ -75,3 +79,13 @@
 
 </template>
 
+<style scoped>
+    .main-container{
+        max-width: 1600px;
+    }
+
+    /* décollement du header */
+.section{
+  padding-top: 10em;
+}
+</style>

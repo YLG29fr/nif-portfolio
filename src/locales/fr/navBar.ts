@@ -5,4 +5,5 @@ export default {
     PROJECTS_BUTTON: "Projets",
     CONTACT_BUTTON: "Contact",
     OTHER_LANG : "EN",
+    BACK_TO_HOME : "Retour à l'accueil"
 }
