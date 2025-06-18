@@ -15,13 +15,13 @@
           <img :src="project.icon" :alt="project.name" />
         </router-link>
       </figure>
-      <div class="card-footer-item"> {{ t(`${project.name}.description`) }} </div>
+      <div class="card-footer-item"> {{ t(`${project.name}.cardDescription`) }} </div>
     </div>
 
     <!-- Footer avec les compétences liés -->
     <footer class="card-footer">
         <span
-        v-for="skill in project.linkedSkills"
+        v-for="skill in project.cardLinkedSkills"
         :key="skill.name"
         class="card-footer-item"
         >

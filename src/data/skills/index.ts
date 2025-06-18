@@ -1,3 +1,5 @@
+import type { Skill } from "../../types/skill";
+
 import { html } from "./frontend/html";
 import { css } from "./frontend/css";
 import { sass } from "./frontend/sass";
@@ -21,7 +23,7 @@ import { intellij } from "./other/intellij";
 import { vscode } from "./other/vscode";
 import { docker } from "./other/docker";
 
-export const skillsList = [
+export const skillsList: Skill[] = [
     html, css, sass, bulma,
     javascript, typescript,
     vue, react, 

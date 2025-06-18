@@ -2,7 +2,7 @@
 
 <script setup lang="ts">
 
-    import { ref, computed } from 'vue';
+    import { ref, computed, onMounted } from 'vue';
     import {useTranslation} from 'i18next-vue'
     import i18next , { changeLanguage } from 'i18next';
     
@@ -10,6 +10,7 @@
 
     import logo from '../../assets/logo.png';
     import ToggleDarkMode from '../ui/ToggleDarkMode.vue';
+import router from '../../router';
 
     const route = useRoute()
 
@@ -31,23 +32,34 @@
         changeLanguage(nextLang.value);
     }
 
-    const currentPage = computed(() => route.name)
+    const isHomePage = computed(() => route.name === 'HomePage')
+
+    const showNavbar = ref(false);
+
+    onMounted(() => {
+    // Décale l'affichage pour laisser le temps à la transition d'être vue
+    setTimeout(() => {
+        showNavbar.value = true;
+    }, 100); // 100ms
+    });
 
 </script>
 
 <template>
 
-    <header>
+    <transition name="fade-navbar">
+        
+    <header v-if="showNavbar" class="navbar-transition-wrapper">
         <nav class="navbar  is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
             <!-- Logo -->
             <div class="navbar-brand">
 
                 <!-- logo sur HomePage -->
-                <a href="#" id="logo" v-if="!currentPage">
+                <a href="#" id="logo" v-if="isHomePage">
                     <img :src="logo" alt="" class="logoNif">
                 </a>
                 <!-- logo sur autres pages - utilisation de navigation programmatique-->
-                <a @click="$router.go(-1)" id="logo" v-else>
+                <a @click="router.go(-1)" v-else>
                     <img :src="logo" alt="" class="logoNif">
                 </a>
                 
@@ -62,7 +74,7 @@
             </div>
             <!-- Menu -->
             <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}" >
-                <div class="navbar-start ml-6" v-if="!currentPage">
+                <div class="navbar-start ml-6" v-if="isHomePage">
                     <a class="navbar-item"
                         href="#aboutMe" >
                         {{ t('navBar:ABOUT_ME_BUTTON') }}    
@@ -78,16 +90,15 @@
                         {{ t('navBar:PROJECTS_BUTTON') }}
                     </a>
 
-                    <a class="navbar-item mr-4"
+                    <a class="navbar-item mr-2"
                         href="#contact" >
                         <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
                     </a>
                 </div>
                 <div class="navbar-start ml-6" v-else>
-                    <a class="navbar-item"
-                        @click="$router.go(-1)" >
+                    <router-link to="/" class="navbar-item" >
                         {{ t('navBar:BACK_TO_HOME') }}
-                    </a>
+                    </router-link>
                 </div>
 
                 <!-- Bouton CTA -->
@@ -98,9 +109,6 @@
                             <button class="button" @click="changeLang">
                                 <strong>{{ t('navBar:OTHER_LANG') }}</strong>
                             </button>
-                            <!-- <button class="button">
-                                <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
-                            </button> -->
                         </div>
                     
                     
@@ -108,6 +116,7 @@
             </div>
         </nav>
     </header>
+    </transition>
 
 </template>
 
@@ -132,6 +141,16 @@
     border-bottom: 1px solid var(--color-orange);
 }
 
+/* Transition fade-in de la navbar au chargement */
+.fade-navbar-enter-active {
+    transition: opacity 1.2s cubic-bezier(.4,0,.2,1), transform 1.2s cubic-bezier(.4,0,.2,1);
+}
+.fade-navbar-enter-from {
+    opacity: 0;
+}
+.fade-navbar-enter-to {
+    opacity: 1;
+}
 
 
 

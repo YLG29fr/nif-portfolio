@@ -7,7 +7,7 @@ export const springboot = {
 }
 
 export const springboot_EN = {
-    description : "Framework Java pour créer des applications web robustes rapidement.",
+    description : "Java framework used to create robust web applications quickly.",
 }
 export const springboot_FR = {
     description : "Framework Java pour créer des applications web robustes rapidement.",

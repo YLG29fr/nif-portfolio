@@ -10,14 +10,23 @@ import type { Skill } from "./skill";
  * @property {string} icon
  * @property {string[]} images
  * @property {string[]} tags
- * @property {Skill[]} linkedSkills
- * @property {string} link
+ * @property {Skill[]} cardLinkedSkills
+ * @property {string} cardDescription
+ * @property Optional {string}  link 
+ * @property {Skill[]} allLinkedSkills
+ * @property {string} description
+ * @property {string} context
  */
 export interface Project {
     name: string;
     icon: string;
     images: string[];
     tags: string[];
-    linkedSkills: Skill[];
-    link: string;
+    cardLinkedSkills: Skill[];
+    cardDescription: string;
+    link?: string;
+    allLinkedSkills: Skill[];
+    description: string;
+    context: string;
+
 }

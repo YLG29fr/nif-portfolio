@@ -3,10 +3,10 @@
     import { useRoute } from 'vue-router'
     import { useTranslation } from 'i18next-vue'
 
-    import { projectsList } from '../../data/projects'
+    import { projectsList } from '../data/projects'
     
-    import NavBar from '../../components/layout/NavBar.vue'
-    import ScrollToTop from '../../components/ui/ScrollToTop.vue'
+    import NavBar from '../components/layout/NavBar.vue'
+    import ScrollToTop from '../components/ui/ScrollToTop.vue'
     
 
     const {t} = useTranslation()
@@ -48,11 +48,11 @@
         </div>
     
     <!-- Compétences -->
-    <div v-if="currentProject.linkedSkills && currentProject.linkedSkills.length"   
+    <div v-if="currentProject.allSkills && currentProject.allSkills.length"   
      style="height: 50rem;">
         <h2>Compétences</h2>
         <ul>
-        <li v-for="skill in currentProject.linkedSkills" :key="skill.name">
+        <li v-for="skill in currentProject.allSkills" :key="skill.name">
             <img :src="skill.icon" :alt="skill.name" style="width: 24px; height: 24px; vertical-align: middle;" />
             {{ skill.name }}
         </li>

@@ -21,7 +21,7 @@ import type { Skill } from '../../types/skill'
 import { useTranslation } from 'i18next-vue';
 const { t } = useTranslation('skills');
 
-// Props attend un objet skill comme merise.ts
+// Props attend un objet Skill comme merise.ts, description et hoverable sont optionnels
 defineProps<{
   skill: Skill,
   desc: boolean,
