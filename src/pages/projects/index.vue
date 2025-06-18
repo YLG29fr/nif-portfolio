@@ -1,9 +1,13 @@
 <script setup lang="ts">
     import { computed } from 'vue'
     import { useRoute } from 'vue-router'
-    import NavBar from '../../components/layout/NavBar.vue'
-    import { projectsList } from '../../data/projects'
     import { useTranslation } from 'i18next-vue'
+
+    import { projectsList } from '../../data/projects'
+    
+    import NavBar from '../../components/layout/NavBar.vue'
+    import ScrollToTop from '../../components/ui/ScrollToTop.vue'
+    
 
     const {t} = useTranslation()
 
@@ -76,7 +80,7 @@
     </div>
 
     </section>
-
+<ScrollToTop />
 </template>
 
 <style scoped>

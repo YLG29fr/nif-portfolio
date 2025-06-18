@@ -11,7 +11,7 @@
     <!-- Image principale du projet -->
     <div class="card-image">
       <figure class="image is-4by4">
-        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener">
+        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
           <img :src="project.icon" :alt="project.name" />
         </router-link>
       </figure>
@@ -39,6 +39,14 @@ import skillIcon from './skillsIcons.vue'
 
 import { useTranslation } from 'i18next-vue';
 const { t } = useTranslation('projects');
+
+// Fonction pour ajuster le scroll lors d'un changement de page - retour haut de page plutot que position sur la page actuelle
+function adjustScrollOnRedirect() {
+  // Petit délai pour laisser le routeur changer la page
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 0);
+}
 
 
 // Props attend un objet Projet comme portfolio
