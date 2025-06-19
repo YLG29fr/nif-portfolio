@@ -18,8 +18,19 @@
     <NavBar />
 
     <section class="section main-container mx-auto">
-            <h1 class="title"> {{ gemenyApp.name }}</h1>
-            
+            <h1 class="title"> {{ gemenyApp.name }}  -- <u>page WIP </u></h1>
+            <h2 class="subtitle">
+                {{t(`projects:${gemenyApp.localesName}.CARD_DESCRIPTION`)}}
+            </h2>
+
+            <div>
+                {{ t('projects:PROJECT_SKILLS') }}
+                <div class="is-flex is-flex-wrap-wrap">
+                    <div v-for="skill in gemenyApp.allLinkedSkills" :key="skill.name" class="m-4">
+                        <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <ScrollToTop />
