@@ -4,7 +4,7 @@
     <!-- Header avec le nom du projet -->
     <header class="card-header">
       <p class="card-header-title">
-        {{ t(`${project.name}.title`) }}
+        {{ t(`${project.localesName}.TITLE`) }}
       </p>
     </header>
 
@@ -15,7 +15,7 @@
           <img :src="project.icon" :alt="project.name" />
         </router-link>
       </figure>
-      <div class="card-footer-item"> {{ t(`${project.name}.cardDescription`) }} </div>
+      <div class="card-footer-item"> {{ t(`${project.localesName}.CARD_DESCRIPTION`) }} </div>
     </div>
 
     <!-- Footer avec les compétences liés -->

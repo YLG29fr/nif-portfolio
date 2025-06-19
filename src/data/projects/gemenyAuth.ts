@@ -9,35 +9,39 @@ const linkedSkills = skillsList.filter(skill =>
 );
 
 const otherSkills = skillsList.filter(skill =>
-    !["HTML", "CSS", "Bulma", "VSCode" ].includes(skill.name)
+    ["HTML", "CSS", "Bulma", "VSCode" ].includes(skill.name)
 );
 
 const allLinkedSkills = [...linkedSkills,... otherSkills]
 
 export const gemenyAuth = {
 
-    name: "GemenyAuth",
+    name: "Gemeny-Auth",
+    localesName: "gemenyAuth",
     icon: images[2],
     images: images,
     tags: ["Fullstack"],
     cardLinkedSkills: linkedSkills,
     allLinkedSkills: allLinkedSkills,
-    link: "",
+    link: undefined,
+    presentation : "/projet/gemenyAuth/view",
+    textsCount: 0,
+    
 };
 
 export const gemenyAuth_EN = {
-    title : "Gemeny_Auth",
-    cardDescription : "API for online authentication in the Gemeny application (data obfuscation).",
+    TITLE : "Gemeny_Auth",
+    CARD_DESCRIPTION : "API for online authentication in the Gemeny application (data obfuscation).",
 
-    description : "API for online authentication in the Gemeny application (data obfuscation).",
-    context : "",
+    DESCRIPTION : "API for online authentication in the Gemeny application (data obfuscation).",
+    CONTEXT : "",
     
 }
 
 export const gemenyAuth_FR = {
-    title : "Gemeny_Auth",
-    cardDescription : "API pour l'authentification en ligne de l'application Gemeny (offuscation de données).",
+    TITLE : "Gemeny_Auth",
+    CARD_DESCRIPTION : "API pour l'authentification en ligne de l'application Gemeny (offuscation de données).",
 
-    description : "API pour l'authentification en ligne de l'application Gemeny (offuscation de données).",
-    context : "",
+    DESCRIPTION : "API pour l'authentification en ligne de l'application Gemeny (offuscation de données).",
+    CONTEXT : "",
 }
