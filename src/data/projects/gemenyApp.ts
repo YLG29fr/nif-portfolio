@@ -5,11 +5,11 @@ import { images } from '../../assets/img/projects/gemenyApp/index.ts';
 import { skillsList } from '../skills/index.ts';
 
 const linkedSkills = skillsList.filter(skill =>
-    ["React", "TypeScript", "CSS", "GitLab", "Figma" ].includes(skill.name)
+    ["React", "TypeScript", "GitLab", "Figma"].includes(skill.name)
 );
 
 const otherSkills = skillsList.filter(skill =>
-    ["HTML", "Bulma", "VSCode" ].includes(skill.name)
+    ["HTML", "CSS", "VSCode"].includes(skill.name)
 );
 
 const allLinkedSkills = [...linkedSkills,... otherSkills]

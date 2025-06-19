@@ -1,4 +1,5 @@
 import { java_FR } from "../../data/skills/backend/java";
+import { sql_FR } from "../../data/skills/backend/sql";
 import { mariadb_FR } from "../../data/skills/backend/mariadb";
 import { mongodb_FR } from "../../data/skills/backend/mongodb";
 import { nodejs_FR } from "../../data/skills/backend/nodejs";
@@ -23,6 +24,7 @@ import { vscode_FR } from "../../data/skills/other/vscode";
 
 export default {
     Java : java_FR,
+    SQL : sql_FR,
     MariaDB : mariadb_FR,
     MongoDB : mongodb_FR,
     NodeJS : nodejs_FR,

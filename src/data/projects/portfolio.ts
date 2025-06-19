@@ -5,11 +5,11 @@ import { images } from '../../assets/img/projects/portfolio/index.ts';
 import { skillsList } from '../skills/index.ts';
 
 const linkedSkills = skillsList.filter(skill =>
-    ["Vue", "TypeScript", "CSS", "GitHub", "Figma"].includes(skill.name)
+    ["Vue", "TypeScript", "CSS", "GitHub"].includes(skill.name)
 );
 
 const otherSkills = skillsList.filter(skill =>
-    ["HTML", "Bulma", "VSCode" ].includes(skill.name)
+    ["HTML", "CSS", "JavaScript", "Bulma", "VSCode", "Figma"].includes(skill.name)
 );
 
 const allLinkedSkills = [...linkedSkills,... otherSkills]

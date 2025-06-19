@@ -12,6 +12,7 @@ import { bulma } from "./frontend/bulma";
 import { nodejs } from "./backend/nodejs";
 import { java } from "./backend/java";
 import { springboot } from "./backend/springboot";
+import { sql } from "./backend/sql";
 import { mariadb } from "./backend/mariadb";
 import { mongodb } from "./backend/mongodb";
 
@@ -28,8 +29,8 @@ export const skillsList: Skill[] = [
     javascript, typescript,
     vue, react, 
     git, gitlab, github,
-    java,springboot, nodejs,
-    mariadb, mongodb,
+    java, springboot, nodejs,
+    sql, mariadb, mongodb,
     intellij, vscode,
     docker,  figma,
 ]

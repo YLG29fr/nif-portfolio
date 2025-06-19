@@ -1,4 +1,5 @@
 import { java_EN } from "../../data/skills/backend/java";
+import { sql_EN } from "../../data/skills/backend/sql";
 import { mariadb_EN } from "../../data/skills/backend/mariadb";
 import { mongodb_EN } from "../../data/skills/backend/mongodb";
 import { nodejs_EN } from "../../data/skills/backend/nodejs";
@@ -23,6 +24,7 @@ import { vscode_EN } from "../../data/skills/other/vscode";
 
 export default {
     Java : java_EN,
+    SQL : sql_EN,
     MariaDB : mariadb_EN,
     MongoDB : mongodb_EN,
     NodeJS : nodejs_EN,

@@ -5,11 +5,11 @@ import { images } from "../../assets/img/projects/gemenyAuth/index.ts";
 import { skillsList } from '../skills/index.ts';
 
 const linkedSkills = skillsList.filter(skill =>
-    ["Java", "SpringBoot", "MariaDB"].includes(skill.name)
+    ["Java", "SpringBoot", "MariaDB", "SQL"].includes(skill.name)
 );
 
 const otherSkills = skillsList.filter(skill =>
-    ["HTML", "CSS", "Bulma", "VSCode" ].includes(skill.name)
+    ["IntelliJ" ].includes(skill.name)
 );
 
 const allLinkedSkills = [...linkedSkills,... otherSkills]
