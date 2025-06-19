@@ -12,13 +12,13 @@ import PagePortfolio from './pages/projects/PagePortfolio.vue'
 const routes = [
     { path: '/',name: 'HomePage', component: Home },
     
-    { path: '/projets', name: 'ProjectsList', component: Index },
+    { path: '/projets/:any?', name: 'ProjectsList', component: Index },
 
-    { path: '/projets/portfolio', name: 'PagePortfolio', component: PagePortfolio },
-    { path: '/projets/gemeny-app', name: 'PageGemenyApp', component: PageGemenyApp },
-    { path: '/projets/gemeny-auth', name: 'PageGemenyAuth', component: PageGemenyAuth },
+    { path: '/projet/portfolio', name: 'PagePortfolio', component: PagePortfolio },
+    { path: '/projet/gemeny-app', name: 'PageGemenyApp', component: PageGemenyApp },
+    { path: '/projet/gemeny-auth', name: 'PageGemenyAuth', component: PageGemenyAuth },
 
-    { path: '/projets/:name?', name: 'ProjectNotFound', component: Index },
+    { path: '/projet/:name?', name: 'ProjectNotFound', component: Index },
 
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]

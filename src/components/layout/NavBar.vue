@@ -143,7 +143,7 @@ import router from '../../router';
 
 /* Transition fade-in de la navbar au chargement */
 .fade-navbar-enter-active {
-    transition: opacity 1.2s cubic-bezier(.4,0,.2,1), transform 1.2s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
 }
 .fade-navbar-enter-from {
     opacity: 0;

@@ -7,9 +7,10 @@ export interface Project {
     images: string[];
     tags: string[];
     cardLinkedSkills: Skill[];
-    link?: string;
     allLinkedSkills: Skill[];
-
+    
+    link?: string;
+    presentation?: string;
     textsCount: number
 
 

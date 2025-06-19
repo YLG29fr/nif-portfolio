@@ -24,7 +24,7 @@ export const gemenyApp = {
     cardLinkedSkills: linkedSkills,
     allLinkedSkills: allLinkedSkills,
     link : "https://gemeny.io/",
-    presentation : "/projet/gemenyApp/view",
+    presentation : "/projet/gemeny-app",
     textsCount: 1,
 
 }

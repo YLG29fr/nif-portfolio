@@ -24,7 +24,7 @@ export const portfolio = {
     cardLinkedSkills: linkedSkills, 
     allLinkedSkills: allLinkedSkills,
     link : undefined,
-    presentation : "/projet/portfolio/view",
+    presentation : "/projet/portfolio",
     textsCount: 0,
 }
 

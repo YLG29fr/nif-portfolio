@@ -11,5 +11,5 @@ export default {
     PROJECT_CONTEXT : "Contexte du projet",
     PROJECT_LINK : "Voir le projet en ligne",
     PROJECT_PRESENTATION : "Voir les détails du projet",
-    PROJECT_SKILLS : "Compétences employées sur ce projet",
+    PROJECT_SKILLS : "Technologies employées sur ce projet",
 }

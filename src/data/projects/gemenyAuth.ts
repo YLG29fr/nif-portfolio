@@ -24,7 +24,7 @@ export const gemenyAuth = {
     cardLinkedSkills: linkedSkills,
     allLinkedSkills: allLinkedSkills,
     link: undefined,
-    presentation : "/projet/gemenyAuth/view",
+    presentation : "/projet/gemenyAuth",
     textsCount: 0,
     
 };

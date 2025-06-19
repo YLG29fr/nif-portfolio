@@ -21,67 +21,49 @@
         
 
     <!-- Affiche la liste des projets -->
-    <h1 class="title"> {{ t('projects:PROJECTS_LIST') }}</h1>
+    <h1 class="title has-text-centered"> {{ t('common:PROJECTS_LIST') }}</h1>
     
     <ul>
         <li v-for="project in projectsList" :key="project.name">
-            <div class="section">
-                <nav class="level">
-  <p class="level-item has-text-centered">
-    <a class="link is-info" 
-        :href="project.name.toLocaleLowerCase()" 
-        rel="noopener" target="_blank">
-        {{ t('projects:PROJECT_PRESENTATION') }}
-    </a>
-  </p>
-  <p class="level-item has-text-centered">
-    <h1 class="title"> {{ project.name }} </h1>
-  </p>
-
-                    <button v-if="project.link" class="button is-primary">
-                        <a :href="project.link" target="_blank" rel="noopener" class="has-text-dark">
-                            {{ t('projects:PROJECT_LINK') }}
-                        </a>
-                    </button>
-
-                    <button v-else class="button is-primary">
-                        <router-link :to="`/projet/${project.name.toLowerCase()}`" class="has-text-dark">
-                            {{ t('projects:PROJECT_LINK') }}
-                        </router-link>
-                    </button>
-
-</nav>
-                <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
+            <div class="section is-justify-content-center">
+                
+                <!-- Nom du projet -->
+                <div class="m-6">
+                    <h1 class="title has-text-centered m-2"> {{ project.name }} </h1>
+                    <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
+                </div>
             
                 <!-- Images -->
-                <div v-if="project.images">
+                <div v-if="project.images" class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
                 
                         <img
                         v-for="(img, idx) in project.images"
                         :key="idx"
                         :src="img"
-                        :alt="`${idx + 1} du projet ${project.name}`"
-                        style="max-width: 200px; margin: 0 10px 10px 0;"
+                        :alt="`screen ${idx + 1} projet ${project.name}`"
+                        style="max-width: 20%;"
                         />
+                
                 </div>
             
-            <!-- Compétences -->
-                <h1 class="title"> {{ t('projects:PROJECT_SKILLS') }}</h1>
-                <div class="is-flex is-flex-wrap-wrap">
-                    <div v-for="skill in project.allLinkedSkills" :key="skill.name" class="m-4">
-                        <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
+                <!-- Compétences -->
+                <div class="is-justify-content-center">
+                    <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
+                        <div v-for="skill in project.allLinkedSkills" :key="skill.name" class="m-4">
+                            <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
+                        </div>
                     </div>
                 </div>
                 
-            <!-- Lien -->
-                <div v-if="project?.link">
-                    <button class="button is-primary">
-                        <a :href="project.link" target="_blank" rel="noopener" class="has-text-dark">
-                            {{ t('projects:PROJECT_LINK') }}
+                <!-- CTA page du projet -->
+                <div class="is-flex is-justify-content-center mt-6">
+                    <button v-if="project.presentation" class="button is-success">
+                        <a :href="project.presentation" target="_blank" rel="noopener" class="has-text-dark">
+                            {{ t('projects:PROJECT_PRESENTATION') }}
                         </a>
                     </button>
                 </div>
-            
+
             </div>
         </li>
         <div class="separator"></div>
@@ -94,6 +76,11 @@
 </template>
 
 <style scoped>
+
+    .level{
+        max-width: 1000px;
+    }
+
     .main-container{
         max-width: 1600px;
     }

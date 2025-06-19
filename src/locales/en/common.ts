@@ -11,6 +11,7 @@ export default {
 
     PROJECTS_TITLE:"Discover my projects below !",
     PROJECTS_SUBTITLE:"Discover my projects and the skills mobilized for each one. Click on the image to learn more about each realization.",
+    PROJECTS_LIST:"Here you can find the projects I have worked on so far.",
 
     FOOTER_TEXT:"All rights reserved",
     FOOTER_LEGAL_TEXT:"Legal notices",
