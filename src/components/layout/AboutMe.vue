@@ -29,10 +29,23 @@
     </section>
 </template>
 
-<style>
+<style scoped>
+
+[data-theme="dark"] {
     .section{
+        background-color: var(--color-grey);
+        opacity: 0.8;
         position: relative;
         z-index: 1;
     }
+}
+[data-theme="light"] {
+    .section{
+        background-color: var(--color-dutch-white);
+        opacity: 0.8;
+        position: relative;
+        z-index: 1;
+    }
+}
 </style>
 

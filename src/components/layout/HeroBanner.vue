@@ -43,7 +43,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   background-size: cover;
   background-position: center;
 }

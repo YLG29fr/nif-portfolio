@@ -125,7 +125,6 @@ import router from '../../router';
       /* Effet glassmorphism */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    /* Optionnel : bordure plus douce */
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
 }
 
