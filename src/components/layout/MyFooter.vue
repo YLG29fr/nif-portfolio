@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <footer class="footer">
+    <footer class="footer ">
         <div class=" mx-6 is-flex is-justify-content-center">
             
             <div class="mt-6">
@@ -21,15 +21,35 @@
 
 <style scoped>
 
+/* Version desktop */
+@media screen and (min-width: 770px) {
+    .footer {
+        padding:  0%  0%  1rem 0%;
+        margin-inline: 20%;
+        border-radius: 50px 50px 0px 0px;
+    }
+}
+
+.footer {
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
   /* Pour le dark mode */
 :root[data-theme="dark"] .footer {
-    background: linear-gradient(180deg, var(--color-grey) 0%, var(--color-purple-transparent) 100%) ;
+    filter: drop-shadow(var(--color-purple) 0px -2px 2px);
+    /* background: var(--color-purple-transparent); */
+    opacity: 0.7;
 }
 
 /* Pour le light mode */
 :root[data-theme="light"] .footer {
+    filter: drop-shadow(var(--color-orange) 0px -2px 2px);
     background: linear-gradient(180deg, var(--color-dutch-white) 0%, var(--color-orange-transparent) 100%);
-    border-bottom: 1px solid var(--color-orange);
+    opacity: 0.8;
+    
 }
 
 </style>

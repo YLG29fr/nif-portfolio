@@ -29,3 +29,10 @@
     </section>
 </template>
 
+<style>
+    .section{
+        position: relative;
+        z-index: 1;
+    }
+</style>
+

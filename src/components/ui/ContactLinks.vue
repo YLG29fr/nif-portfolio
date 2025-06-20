@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import linkedIn from '../../assets/img/common/icone-linkedin.png';
+    import linkedIn from '../../assets/icons/common/icone-linkedin.png';
 </script>
 
 <template>

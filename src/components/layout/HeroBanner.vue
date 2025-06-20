@@ -9,6 +9,9 @@
 </script>
 <template>
 
+  <div class="hero-background fullwidth">
+  </div>
+  
   <section class="section" >
 
     <div class="columns">
@@ -27,19 +30,29 @@
 
 <style scoped>
 
-/* décollement du header */
-.section{
-  padding-top: 10em;
+[data-theme="light"] .hero-background {
+  background-image: url('../../assets/img/common/hero-banner-jour.png');
+}
+[data-theme="dark"] .hero-background {
+  background-image: url('../../assets/img/common/hero-banner-nuit.png');
 }
 
-.hoverEffect {
-  filter: drop-shadow(0 0 2em #646cffaa);
-  transition: ease-in-out 0.5s;
-  width: 50%;
+.hero-background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
 }
-.hoverEffect:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-  transition: ease-in-out 0.5s;
-  transform: scale(1.2);
+
+/* décollement du header */
+.section{
+  position: relative;
+  padding-top: 10em;
+  z-index: 1;
 }
+
 </style>
