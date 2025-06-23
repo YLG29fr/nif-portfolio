@@ -1,4 +1,10 @@
 <!-- src/components/ui/ScrollToTop.vue -->
+<script setup>
+
+import scrollUp from '../../assets/icons/common/icons8-slide-up-48.png';
+
+</script>
+
 <template>
 
 <a href="#" class="scroll-to-top">
@@ -14,13 +20,9 @@
 .scroll-to-top{
     position: fixed;
     bottom: 20px;
-    right: 16px;
+    right: 20px;
     z-index: 9999;
 }
 </style>
 
-<script setup>
 
-import scrollUp from '../../assets/icons/common/scroll-up-48.png';
-
-</script>
