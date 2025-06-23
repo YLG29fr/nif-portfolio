@@ -57,9 +57,12 @@ defineProps<{
 
 <style scoped>
   [data-theme="light"] .card{
-        
-        background-color: var(--color-sable);
-    
+        background-color: var(--color-dutch-white);
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  }
+  [data-theme="dark-unused"] .card{
+        background-color: var(--color-purple-transparent);
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   }
 
 </style>
