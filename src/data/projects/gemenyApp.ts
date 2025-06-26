@@ -43,7 +43,7 @@ export const gemenyApp_EN = {
     PRODUCT_DESCRIPTION: "The Gemeny product is a software solution that applies obfuscation rules to incoming data, modifying their content without altering their structure. The goal is to secure sensitive information while ensuring its usability for testing or demonstrations. Users can configure their own rules, and the system then applies these transformations transparently.",
 
     INTERNSHIP_TITLE: "Internship Project Context at Gemeny Software",
-    INTERNSHIP_CONTEXT: "As part of my internship at Gemeny Software, the main objective was to develop a web interface allowing any user to test the Gemeny product online, easily and without installation. This interface was designed to support commercial demonstrations of the product to the public and potential clients.",
+    INTERNSHIP_DESCRIPTION: "As part of my internship at Gemeny Software, the main objective was to develop a web interface allowing any user to test the Gemeny product online, easily and without installation. This interface was designed to support commercial demonstrations of the product to the public and potential clients.",
 
     OBJECTIVES: "Objectives and Challenges",
     OBJECTIVE_1: "Allow users to easily test the Gemeny product online, without installation.",
@@ -83,10 +83,10 @@ export const gemenyApp_FR = {
     COMPANY_DESCRIPTION: "Gemeny Software est une entreprise française innovante fondée en 2023 et spécialisée dans la cybersécurité. Elle développe une solution logicielle d’obfuscation de données, permettant de protéger efficacement les jeux de données techniques et sensibles tout en conservant leur structure originale.",
 
     PRODUCT_TITLE : "Le produit Gemeny",
-    PRODUCT_DESCRIPTION : "Le produit Gemeny est une solution logicielle permet d’appliquer des règles d’obfuscation sur des données entrantes, en modifiant leur contenu sans altérer leur structure. L’objectif est de sécuriser les informations sensibles tout en garantissant leur utilisabilité pour des tests ou des démonstrations. L’utilisateur peut configurer ses propres règles, et le système applique ensuite ces transformations de façon transparente.",
+    PRODUCT_DESCRIPTION : "Le produit Gemeny est une solution logicielle permettant d’appliquer des règles d’obfuscation sur des données entrantes, en modifiant leur contenu sans altérer leur structure. L’objectif est de sécuriser les informations sensibles tout en garantissant leur utilisabilité pour des tests ou des démonstrations. L’utilisateur peut configurer ses propres règles, et le système applique ensuite ces transformations de façon transparente.",
 
-    INTERNSHIP_TITLE : "Contexte du projet de stage chez Gemeny Software",
-    INTERNSHIP_CONTEXT : "Dans le cadre de mon stage chez Gemeny Software, l’objectif principal était de développer une interface web permettant à tout utilisateur de tester le produit Gemeny en ligne, facilement et sans installation. Cette interface devait servir de support à la démonstration commerciale du produit auprès du public et de potentiels clients.",
+    INTERNSHIP_TITLE : "Contexte du projet de stage",
+    INTERNSHIP_DESCRIPTION : "Dans le cadre de mon stage chez Gemeny Software, l’objectif principal était de développer une interface web permettant à tout utilisateur de tester le produit Gemeny en ligne, facilement et sans installation. Cette interface devait servir de support à la démonstration commerciale du produit auprès du public et de potentiels clients.",
 
     OBJECTIVES : "Objectifs et enjeux",
     OBJECTIVE_1 : "Permettre aux utilisateurs de tester facilement et sans installation le produit Gemeny en ligne.",
@@ -95,7 +95,7 @@ export const gemenyApp_FR = {
     OBJECTIVE_4 : "Améliorer l’expérience utilisateur grâce à une approche mobile-first et des maquettes réalisées sur Figma.",
     OBJECTIVE_5 : "Livrer une version stable et fonctionnelle pour une présentation officielle lors du salon SOFINS.",
     
-    ENVIRONMENT_TITLE : "Environnement technique",
+    ENVIRONMENT_TITLE : "Conception et environnement technique",
     ENVIRONMENT_DESCRIPTION : "Le projet a été entwickelt avec React, TypeScript, GitLab et Figma.",
 
     DESIGN_TITLE: "Maquettage et design",

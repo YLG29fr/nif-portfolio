@@ -30,9 +30,9 @@
 
 <style scoped>
 
-[data-theme="light"] .hero-background {
+/* [data-theme="light"] .hero-background {
   background-image: url('../../assets/img/common/hero-banner-jour2.png');
-}
+} */
 [data-theme="dark"] .hero-background {
   background-image: url('../../assets/img/common/hero-banner-nuit.png');
 }

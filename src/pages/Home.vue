@@ -31,5 +31,14 @@
     .main-container{
         max-width: 1600px;
     }
+    
+/* overwrite couleur de fond du mode light BULMA */
+[data-theme="light"]{
+
+    :root{
+        --bulma-scheme-main: var(--color-dutch-white);
+    }
+}
+
 </style>
 

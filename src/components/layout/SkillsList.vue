@@ -102,7 +102,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-[data-theme="light"] {
+/* [data-theme="light"] {
 
   .section {
     background-color: rgba(255, 255, 255, 0.7);
@@ -113,7 +113,7 @@ onMounted(() => {
     
   }
 
-}
+} */
 
 
 /* Animation slide-in */
