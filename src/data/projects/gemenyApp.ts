@@ -102,7 +102,7 @@ export const gemenyApp_FR = {
     DESIGN_DESCRIPTION: "L’interface a été conçue en respectant la charte graphique de Gemeny et en assurant la cohérence avec l’application existante. Les maquettes desktop et mobile ont été réalisées sur Figma, avec une attention particulière portée à l’UX/UI et à l’accessibilité. L’approche mobile-first a guidé la conception des composants.",
 
     ORGANISATION_TITLE: "Organisation du travail",
-    ORGANISATION_DESCRIPTION: "Le développement s’est appuyé sur une méthode Agile, avec un suivi des tâches via un tableau Kanban GitLab, des daily meetings, et une gestion rigoureuse des branches Git. Chaque fonctionnalité était développée sur une branche dédiée avant intégration.",
+    ORGANISATION_DESCRIPTION: "Le développement s’est appuyé sur une méthode Agile, avec un suivi des tâches via un tableau Kanban GitLab, des daily meetings, et une gestion rigoureuse des branches Git. Chaque fonctionnalité étant développée sur une branche dédiée avant intégration.",
 
     STRUCTURE_TITLE: "Structure du projet",
     STRUCTURE_DESCRIPTION: "L’arborescence du projet Gemeny_Web sépare les composants par thématique et usage, avec un nommage explicite et conforme aux bonnes pratiques. L’organisation facilite la maintenabilité et l’évolutivité du code.",
@@ -113,4 +113,9 @@ export const gemenyApp_FR = {
     DEPLOYMENT_TITLE: "Déploiement",
     DEPLOYMENT_DESCRIPTION: "L’application a été déployée régulièrement sur Surge.sh pour permettre des tests et des démonstrations. L’interface web est intégrée sur le site de l’entreprise via une iframe pour une expérience fluide.",
 
+    DWWM_TITLE : "Soutenance du titre DWWM",
+    DWWM_DESCRIPTION : "Ce projet a servi de support principal à ma soutenance pour l'obtention du titre Développeur Web et Web Mobile (DWWM).Vous pouvez consulter les documents de présentation ci-dessous :",
+
+    DWWM_LINK_1 : "PDF 1 – Rapport de projet",
+    DWWM_LINK_2 : "PDF 2 – Support de présentation - powerpoint",
 };
