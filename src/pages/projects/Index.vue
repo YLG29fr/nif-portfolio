@@ -8,6 +8,7 @@
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
     import SkillIcons from '../../components/ui/skillsIcons.vue'
     import MyFooter from '../../components/layout/MyFooter.vue'
+    import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
     const {t} = useTranslation()
 
@@ -15,7 +16,10 @@
 </script>
 
 <template>
-    <section class="section main-container mx-auto">
+    <div class="main-container">
+        
+    
+    <section class="section mx-auto">
 
         <NavBar />
         
@@ -25,10 +29,11 @@
     
     <ul>
         <li v-for="project in projectsList" :key="project.name">
-            <div class="section is-justify-content-center">
+            <SeparatorProp color="var(--color-purple)"/>
+            <div class="is-justify-content-center">
                 
                 <!-- Nom du projet -->
-                <div class="m-6">
+                <div class="">
                     <h1 class="title has-text-centered m-2"> {{ project.name }} </h1>
                     <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
                 </div>
@@ -36,8 +41,9 @@
                 <!-- Images -->
                 <div v-if="project.images" class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
                 
+                    <!-- Affiche les 3 premières images de chaque projet -->
                         <img
-                        v-for="(img, idx) in project.images"
+                        v-for="(img, idx) in project.images.slice(0, 3)" 
                         :key="idx"
                         :src="img"
                         :alt="`screen ${idx + 1} projet ${project.name}`"
@@ -65,14 +71,15 @@
                 </div>
 
             </div>
+
         </li>
-        <div class="separator"></div>
     </ul>
     
-
-    </section>
-<ScrollToTop />
-<MyFooter/>
+<SeparatorProp color="var(--color-purple)"/>
+</section>
+    <ScrollToTop />
+    <MyFooter/>
+</div>
 </template>
 
 <style scoped>
@@ -80,13 +87,16 @@
     .level{
         max-width: 1000px;
     }
-
-    .main-container{
+    /* décollement du header */
+    .section{
         max-width: 1600px;
+        padding-top: 10em;
     }
 
-    /* décollement du header */
-.section{
-    padding-top: 10em;
-}
+    /* overwrite couleur de fond du mode light BULMA */
+    [data-theme="light"] 
+
+    body {
+        background: var(--bulma-body-background-color) !important;
+    }
 </style>

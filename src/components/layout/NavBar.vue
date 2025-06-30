@@ -7,10 +7,10 @@
     import i18next , { changeLanguage } from 'i18next';
     
     import { useRoute } from 'vue-router'
+    import router from '../../router';
 
     import logo from '../../assets/logo.png';
     import ToggleDarkMode from '../ui/ToggleDarkMode.vue';
-import router from '../../router';
 
     const route = useRoute()
 

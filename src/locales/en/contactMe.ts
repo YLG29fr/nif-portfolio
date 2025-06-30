@@ -1,8 +1,8 @@
 export default {
     TITLE : "Contact me",
     CTA : "If you have any questions or would like to work together, please don't hesitate to contact me.",
-    FORM : "Contact me via the form : ",
-    SOCIAL_NETWORK : "Or via my social networks : ",
+    FORM : " via the form : ",
+    SOCIAL_NETWORK : "or via my social networks : ",
     NAME : "Name",
     NAME_FILLER : "Your name",
     EMAIL : "Email",

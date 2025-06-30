@@ -55,7 +55,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section" id="skills">
+  <section class="section bcg-blur" id="skills">
     <h1 class="title">{{ t('common:SKILLS_TITLE') }}</h1>
     <h2 class="subtitle">{{ t('common:SKILLS_SUBTITLE') }}</h2>
 
@@ -102,18 +102,17 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* [data-theme="light"] {
+.section {
+  position: relative;
+}
 
-  .section {
+[data-theme="light"] {
+
+  .bcg-blur {
     background-color: rgba(255, 255, 255, 0.7);
-    
-    backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
-    
   }
 
-} */
+}
 
 
 /* Animation slide-in */

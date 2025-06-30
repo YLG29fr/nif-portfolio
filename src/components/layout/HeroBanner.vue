@@ -30,9 +30,18 @@
 
 <style scoped>
 
-/* [data-theme="light"] .hero-background {
-  background-image: url('../../assets/img/common/hero-banner-jour2.png');
-} */
+@media screen and (min-width: 680px) {
+  [data-theme="light"] .hero-background {
+    background-image: url('../../assets/img/common/hero-banner-jour.png') !important;
+  }
+}
+@media screen and (max-width: 680px) {
+  [data-theme="light"] .hero-background {
+    background-image: url('../../assets/img/common/hero-banner-jour.png') !important;
+  }
+  
+}
+
 [data-theme="dark"] .hero-background {
   background-image: url('../../assets/img/common/hero-banner-nuit.png');
 }
@@ -43,7 +52,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   background-size: cover;
   background-position: center;
 }

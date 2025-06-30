@@ -147,18 +147,19 @@
             <div class="box tabs-content">
                 <!-- gestion -->
                 <div v-if="activeTab === 'gestion'" class="">
-                    <div class="block columns">
-                        <div class="column has-text-justified">
+                    <div class="block columns is-vcentered">
+                        <div class="column has-text-centered">
                             <h2 class="title">{{ t(`projects:${gemenyApp.localesName}.ORGANISATION_TITLE`) }}   </h2>
                             <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.ORGANISATION_DESCRIPTION`) }}   </h2>
-                        </div>
-                        <div class="column-separator"></div>
-                        <div class="column has-text-justified">
+                        
                             <h1 class="title">{{ t(`projects:${gemenyApp.localesName}.DEPLOYMENT_TITLE`) }}</h1>
                             <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.DEPLOYMENT_DESCRIPTION`) }}   </h2>
                         </div>
+                        <div class="column-separator"></div>
+                        <div class="column">
+                            <img :src="gemenyApp.images[5]" alt="gestion" class="kanban-img"/>
+                        </div>
                     </div>
-                    <img :src="gemenyApp.images[5]" alt="gestion"/>
                 </div>
             
                 <!-- design -->
@@ -170,7 +171,7 @@
                         </div>
                         <div class="column-separator"></div>
                         <div class="column has-text-justified">
-                            <img :src="gemenyApp.images[4]" alt="design">
+                            <img :src="gemenyApp.images[4]" alt="design" class="design-img">
                         </div>
                     </div>
                 </div>
@@ -222,11 +223,20 @@
     }
     .tabs-content{
         margin-top: 0px;
+        min-height: 60vh;
     }
 
     .image{
         max-width: 30vw;
     }
+
+    .kanban-img{
+        max-height: 400px;
+    }
+    .design-img{
+        max-height: 400px;
+    }
+
     /* décollement du header */
 .section{
     padding-top: 10em;
@@ -234,5 +244,18 @@
 .column-separator{
     width: 10px;
     margin-inline: 2rem;
+}
+
+
+[data-theme="light"] .tabs.is-boxed li.is-active a {
+    background: var(--color-dutch-white);
+    color: var(--color-orange);
+    font-weight: 700;
+    border-color: var(--color-orange);
+
+}
+
+[data-theme="light"] .tabs-content{
+    background-color: var(--color-dutch-white);
 }
 </style>

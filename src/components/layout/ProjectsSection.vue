@@ -7,18 +7,10 @@
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
 
-    // Fonction pour ajuster le scroll lors d'un changement de page - retour haut de page plutot que position sur la page actuelle
-function adjustScrollOnRedirect() {
-  // Petit délai pour laisser le routeur changer la page
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, 0);
-}
-
 </script>
 
 <template>
-  <section class="section" id="projects">
+  <section class="section bcg-blur" id="projects">
   <h1 class="title">{{ t('common:PROJECTS_TITLE') }}</h1>
   <h2 class="subtitle">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
 
@@ -30,9 +22,28 @@ function adjustScrollOnRedirect() {
 
     <div class="is-flex is-justify-content-center">
       <router-link to="/projets/">
-        <button class="button" @click="adjustScrollOnRedirect"> +++ </button>
+        <button class="button is-CTA has-text-weight-bold" > {{ t('common:PROJECTS_BUTTON') }} </button>
       </router-link>
     </div>
     
   </section>
 </template>
+
+<style scoped>
+
+
+[data-theme="dark"] .is-CTA {
+    background-color: var(--color-purple-transparent);
+  }
+
+
+  [data-theme="light"] {
+    .bcg-blur {
+      background-color: var(--color-dutch-white-transparent);
+    }
+    .is-CTA {
+      background-color: var(--color-orange-transparent);
+    }
+  }
+
+</style>

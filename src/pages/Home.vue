@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+    import SeparatorProp from '../components/ui/SeparatorProp.vue';
+
     import NavBar from '../components/layout/NavBar.vue'
     import HeroBanner from '../components/layout/HeroBanner.vue'
     import AboutMe from '../components/layout/AboutMe.vue'
@@ -19,6 +21,7 @@
         <HeroBanner />
         <AboutMe />
         <SkillsList />
+            <SeparatorProp />
         <ProjectsSection />
         <ContactSection />
         <ScrollToTop />
@@ -31,14 +34,6 @@
     .main-container{
         max-width: 1600px;
     }
-    
-/* overwrite couleur de fond du mode light BULMA */
-[data-theme="light"]{
-
-    :root{
-        --bulma-scheme-main: var(--color-dutch-white);
-    }
-}
 
 </style>
 

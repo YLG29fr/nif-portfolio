@@ -12,6 +12,7 @@ export default {
     PROJECTS_TITLE:"Découvrez mes projets ci-dessous !",
     PROJECTS_SUBTITLE:"Découvrez mes projets et les compétences phares mobilisées pour chacun. Cliquez sur l’image pour en savoir plus sur chaque réalisation.",
     PROJECTS_LIST:"Ici, vous pouvez trouver les projets sur lesquels j’ai travaillé jusqu’à présent.",
+    PROJECTS_BUTTON:"Voir mes autres projets",
 
     FOOTER_TEXT:"Tous droits reservés",
     FOOTER_LEGAL_TEXT:"Mentions légales",

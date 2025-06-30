@@ -70,6 +70,11 @@ export const gemenyApp_EN = {
     DEPLOYMENT_TITLE: "Deployment",
     DEPLOYMENT_DESCRIPTION: "The application was regularly deployed on Surge.sh for testing and demonstrations. The web interface is integrated into the company’s website via an iframe for a seamless experience.",
 
+    DWWM_TITLE : "Support for the DWWM ( Web & Mobile Developer ) title",
+    DWWM_DESCRIPTION : "This project served as the main support for my presentation at the SOFINS exhibition for obtaining the DWWM title. You can find the presentation documents below:",
+
+    DWWM_LINK_1 : "PDF 1 - Project Report",
+    DWWM_LINK_2 : "PDF 2 - Presentation Support - Powerpoint",
 }
 
 export const gemenyApp_FR = {
@@ -113,7 +118,7 @@ export const gemenyApp_FR = {
     DEPLOYMENT_TITLE: "Déploiement",
     DEPLOYMENT_DESCRIPTION: "L’application a été déployée régulièrement sur Surge.sh pour permettre des tests et des démonstrations. L’interface web est intégrée sur le site de l’entreprise via une iframe pour une expérience fluide.",
 
-    DWWM_TITLE : "Soutenance du titre DWWM",
+    DWWM_TITLE : "Soutenance du titre DWWM ( Développeur Web & Web Mobile )",
     DWWM_DESCRIPTION : "Ce projet a servi de support principal à ma soutenance pour l'obtention du titre Développeur Web et Web Mobile (DWWM).Vous pouvez consulter les documents de présentation ci-dessous :",
 
     DWWM_LINK_1 : "PDF 1 – Rapport de projet",

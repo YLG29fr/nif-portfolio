@@ -13,7 +13,7 @@
 <template>
     <section id="aboutMe" class="section">
         <div class="columns">
-            <div class="column">
+            <div class="column about-text  bcg-blur">
                 <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
                 <br>
                 <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
@@ -30,21 +30,16 @@
 </template>
 
 <style scoped>
-
-[data-theme="dark"] {
-    .section{
-        background-color: var(--color-grey);
-        opacity: 0.8;
-        position: relative;
-        z-index: 1;
-    }
+.bcg-blur{
+    border-radius: 10px; ;
 }
+
 [data-theme="light"] {
-    .section{
-        background-color: var(--color-dutch-white);
-        opacity: 0.8;
-        position: relative;
-        z-index: 1;
+    .bcg-blur{
+        background-color: var(--color-dutch-white-transparent);
+    }
+    .about-text{
+        color: black;
     }
 }
 </style>
