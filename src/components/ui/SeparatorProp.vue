@@ -16,12 +16,11 @@
  * @example
  * <Separator color="var(--color-primary)" />
  */
-import { defineProps } from 'vue'
 
-const props = defineProps<{
+defineProps<{
   color?: string
 }>()
-const color = props.color || 'var(--color-purple-transparent)'
+
 </script>
 
 <style scoped>
@@ -31,7 +30,7 @@ const color = props.color || 'var(--color-purple-transparent)'
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    var(--separator-color, var(--color-purple-transparent)),
+    var(--separator-color),
     rgba(0, 0, 0, 0)
   );
   margin-top: 2em;
