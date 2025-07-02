@@ -7,6 +7,10 @@ html {
     background: var(--color-dutch-white);
 }
 
+[data-theme="dark"] body {
+    background: var(--bulma-body-background-color);
+}
+
 .section{
     position: relative;
 }
