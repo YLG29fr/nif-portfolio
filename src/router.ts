@@ -24,7 +24,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/nif-portfolio/'),
     routes,
     scrollBehavior(savedPosition) {
         if (savedPosition) {
