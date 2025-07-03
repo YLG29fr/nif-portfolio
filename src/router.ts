@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { DEPLOY_CONFIG } from './deploy.config'
+
 import Home from './pages/Home.vue'
 import NotFound from './pages/404.vue'
 import Index from './pages/projects/Index.vue'
@@ -24,7 +26,8 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory('/nif-portfolio/'),
+    // selon l'hébergeur, le chemin peut varier
+    history: createWebHistory( DEPLOY_CONFIG.base ),
     routes,
     scrollBehavior(savedPosition) {
         if (savedPosition) {
