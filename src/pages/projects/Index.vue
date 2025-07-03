@@ -64,9 +64,10 @@
                 <!-- CTA page du projet -->
                 <div class="is-flex is-justify-content-center mt-6">
                     <button v-if="project.presentation" class="button is-success">
-                        <a :href="project.presentation" target="_blank" rel="noopener" class="has-text-dark">
+                        
+                        <router-link :to="`/projet/${project.name.toLowerCase()}`" target="_blank" rel="noopener" class="has-text-dark">
                             {{ t('projects:PROJECT_PRESENTATION') }}
-                        </a>
+                        </router-link>
                     </button>
                 </div>
 
