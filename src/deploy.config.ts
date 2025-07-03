@@ -2,8 +2,8 @@
 export const DEPLOY_CONFIG = {
 //! selon l’hébergeur
     // Pour GitHub Pages
-        base: '/nif-portfolio/',
+        // base: '/nif-portfolio/',
 
     // Pour Surge
-        // base: '/', 
+        base: '/', 
 };
