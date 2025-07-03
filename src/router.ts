@@ -29,12 +29,10 @@ const router = createRouter({
     // selon l'hébergeur, le chemin peut varier
     history: createWebHistory( DEPLOY_CONFIG.base ),
     routes,
-    scrollBehavior(savedPosition) {
-        if (savedPosition) {
-            return { ...savedPosition, behavior: 'smooth' }
-        } else {
-            return { top: 0, behavior: 'smooth' }
-        }
+    scrollBehavior() {
+        
+            return { top: 0}
+        
     }
 
 })

@@ -34,6 +34,8 @@
 
     const isHomePage = computed(() => route.name === 'HomePage')
 
+    const isProjectPage = computed(() => route.path.includes('/projet/'))
+
     const showNavbar = ref(false);
 
     onMounted(() => {
@@ -95,8 +97,16 @@
                         <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
                     </a>
                 </div>
+                <div class="navbar-start ml-6" v-else-if="isProjectPage">
+                    <router-link to="/#" class="navbar-item" >
+                        {{ t('navBar:BACK_TO_HOME') }}
+                    </router-link>
+                    <router-link to="/projets" class="navbar-item">
+                        {{ t('navBar:OTHER_PROJECTS_BUTTON') }}
+                    </router-link>
+                </div>
                 <div class="navbar-start ml-6" v-else>
-                    <router-link to="/" class="navbar-item" >
+                    <router-link to="/#" class="navbar-item" >
                         {{ t('navBar:BACK_TO_HOME') }}
                     </router-link>
                 </div>
