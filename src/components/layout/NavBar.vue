@@ -7,7 +7,6 @@
     import i18next , { changeLanguage } from 'i18next';
     
     import { useRoute } from 'vue-router'
-    import router from '../../router';
 
     import logo from '../../assets/logo.png';
     import ToggleDarkMode from '../ui/ToggleDarkMode.vue';
@@ -54,16 +53,16 @@
     <header v-if="showNavbar" class="navbar-transition-wrapper">
         <nav class="navbar  is-fixed-top px-6 py-2" role="navigation" aria-label="main navigation">
             <!-- Logo -->
-            <div class="navbar-brand">
+            <div class="navbar-brand" id="logo" >
 
                 <!-- logo sur HomePage -->
-                <a href="#" id="logo" v-if="isHomePage">
-                    <img :src="logo" alt="" class="logoNif">
-                </a>
+                <router-link to="/" id="logo" aria-label="Retour à l'accueil" v-if="isHomePage">
+                    <img :src="logo" class="logoNif" alt="Logo renard Nif">
+                </router-link>
                 <!-- logo sur autres pages - utilisation de navigation programmatique-->
-                <a @click="router.go(-1)" v-else>
+                <!-- <a href="#"  v-else>
                     <img :src="logo" alt="" class="logoNif">
-                </a>
+                </a> -->
                 
                 <!-- Bouton burger -->
                 <button @click="toggleMenu" :class="{'is-active': isBurgerActive}"

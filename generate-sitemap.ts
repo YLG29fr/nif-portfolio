@@ -4,6 +4,7 @@ import {writeFileSync} from 'fs';
 import {DEPLOY_CONFIG} from './src/deploy.config.ts';
 
 const XML_BASE_URL = DEPLOY_CONFIG.baseSitemap;
+const host = DEPLOY_CONFIG.host;
 
 const routes = [
     '/',
@@ -27,4 +28,4 @@ ${urls}
 `;
 
 writeFileSync('./dist/sitemap.xml', sitemap);
-console.log('Sitemap generated!');
+console.log('Sitemap generated! for ', host);

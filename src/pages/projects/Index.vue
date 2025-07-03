@@ -62,13 +62,12 @@
                 </div>
                 
                 <!-- CTA page du projet -->
-                <div class="is-flex is-justify-content-center mt-6">
-                    <button v-if="project.presentation" class="button is-success">
-                        
-                        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="has-text-dark">
+                <div class="is-flex is-justify-content-center mt-6 ">
+                    <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="has-text-dark">
+                        <button v-if="project.presentation" class="button is-success is-CTA">
                             {{ t('projects:PROJECT_PRESENTATION') }}
-                        </router-link>
-                    </button>
+                        </button>
+                    </router-link>
                 </div>
 
             </div>

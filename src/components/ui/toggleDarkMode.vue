@@ -42,7 +42,7 @@
 
 <template>
 
-    <label class="switch">
+    <label class="switch" aria-label="switch dark mode">
         <input type="checkbox" :checked="selectedTheme === 'dark'" @change="selectedTheme = selectedTheme === 'dark' ? 'light' : 'dark'">
         <span class="slider round"></span>
     </label>

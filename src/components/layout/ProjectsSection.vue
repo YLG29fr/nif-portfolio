@@ -22,7 +22,7 @@
 
     <div class="is-flex is-justify-content-center">
       <router-link to="/projets/">
-        <button class="button is-CTA has-text-weight-bold" > {{ t('common:PROJECTS_BUTTON') }} </button>
+        <button class="button  has-text-weight-bold is-CTA" > {{ t('common:PROJECTS_BUTTON') }} </button>
       </router-link>
     </div>
     
