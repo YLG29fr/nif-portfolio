@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build && cp dist/index.html dist/404.html ",
-    "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "sitemap": "tsx generate-sitemap.ts",
+    "build": "vue-tsc -b && vite build && cp dist/index.html dist/404.html && npm run sitemap",
+    "deploy-github": "gh-pages -d dist",
+    "deploy-surge": "surge dist beta-portfolio-yoannlegoff.surge.sh",
+    "preview": "vite preview",
+    "deploy": "tsx deploy-online.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -19,9 +22,12 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@types/node": "^24.0.10",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
     "gh-pages": "^6.3.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.8"
