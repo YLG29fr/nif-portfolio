@@ -4,12 +4,13 @@
 
     import { ref, computed, onMounted } from 'vue';
     import {useTranslation} from 'i18next-vue'
-    import i18next , { changeLanguage } from 'i18next';
     
     import { useRoute } from 'vue-router'
 
     import logo from '../../assets/logo.png';
     import ToggleDarkMode from '../ui/ToggleDarkMode.vue';
+
+    import LangChangeProp from '../ui/LangChangeProp.vue';
 
     const route = useRoute()
 
@@ -18,17 +19,6 @@
     const isBurgerActive = ref(false);
     function toggleMenu() {
         isBurgerActive.value = !isBurgerActive.value;
-    }
-
-    const currentLang = ref(i18next.language);
-    i18next.on('languageChanged', (lng) => {
-        currentLang.value = lng
-    });
-
-    const nextLang = computed(() => currentLang.value === 'fr' ? 'en' : 'fr')
-
-    function changeLang() {
-        changeLanguage(nextLang.value);
     }
 
     const isHomePage = computed(() => route.name === 'HomePage')
@@ -115,9 +105,7 @@
                     
                         <div class="buttons">
                             <ToggleDarkMode/>
-                            <button class="button" @click="changeLang">
-                                <strong>{{ t('navBar:OTHER_LANG') }}</strong>
-                            </button>
+                            <LangChangeProp/>
                         </div>
                     
                     
