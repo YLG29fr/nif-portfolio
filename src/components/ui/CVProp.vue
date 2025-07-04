@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { ref } from 'vue';
     import CVjpg from '../../assets/img/common/CV-ylg.jpg';
+    import CVjpgCropped from '../../assets/img/common/cropped-CV-ylg.jpg';
     import CVpdf from '../../assets/CV_Alternance_CDA_YLG.pdf';
     import { useTranslation } from 'i18next-vue';
     const { t } = useTranslation('errors');
@@ -12,19 +13,20 @@
 <template>
     <div class="card">
         <div class="card-image">
-        <p class="has-text-centered has-text-danger has-text-weight-bold">{{ t('FRENCH_ONLY') }}</p>
-        <figure class="image miniature" @click="showZoom = true">
-            <img :src="CVjpg" alt="CV Icon" class="miniature-img" />
-        </figure>
-        </div>
+            <p class="card-header-title"> Mon C.V.</p>
+            <p class="has-text-centered has-text-danger has-text-weight-bold">{{ t('FRENCH_ONLY') }}</p>
+            <figure class="image miniature" @click="showZoom = true">
+                <img :src="CVjpgCropped" alt="CV Icon"/>
+            </figure>
+            </div>
 
-        <div class="card-footer">
-        <button class="card-footer-item" :href="CVpdf" target="_blank" rel="noopener">
-            Open PDF
-        </button>
-        <button class="card-footer-item" @click="showZoom = true">
-            Zoom
-        </button>
+            <div class="card-footer">
+                <a :href="CVpdf" class="card-footer-item" target="_blank" rel="noopener">
+                    Open PDF
+                </a>
+            <button class="card-footer-item" @click="showZoom = true">
+                Zoom
+            </button>
         </div>
     </div>
 
@@ -40,7 +42,7 @@
         </div>
         <button class="modal-close is-large" @click="showZoom = false" aria-label="close"></button>
     </div>
-</Teleport>
+    </Teleport>
 
 </template>
 
@@ -51,26 +53,22 @@
     display: block;
 }
 
-.miniature {
-  /* Le conteneur de l'image */
-  width: 100%;         
-  height: 50vw; 
-  max-height: 540px;       
-  border-radius: 8px 8px 0px 0px; 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  cursor: zoom-in;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-footer-item {
+    text-decoration: none !important;
+    color: inherit !important;
+
 }
 
-.miniature-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* L’image remplit le cadre, quitte à être rognée */
-  object-position: top;
-
-  display: block;
+.miniature {
+  /* Le conteneur de l'image */
+    /* height: 50vw;  */
+    /* max-height: 540px;        */
+    border-radius: 8px 8px 0px 0px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: zoom-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
