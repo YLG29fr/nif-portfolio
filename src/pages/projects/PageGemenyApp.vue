@@ -4,6 +4,9 @@
     import { ref } from 'vue'
 
     import { gemenyApp } from '../../data/projects/gemenyApp'
+
+    import dwwmLink_1 from '../../assets/Diapo-soutenance-DWWM.pdf';
+    import dwwmLink_2 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
     
     import NavBar from '../../components/layout/NavBar.vue'
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
@@ -52,10 +55,10 @@
                 {{ t(`projects:${gemenyApp.localesName}.DWWM_DESCRIPTION`) }}
             </h2>
             <div class="buttons is-centered mt-4">
-                <a class="button is-success" href="/assets/Diapo-soutenance-DWWM.pdf" target="_blank" rel="noopener">
+                <a class="button is-success" :href="dwwmLink_1" target="_blank" rel="noopener">
                     {{ t(`projects:${gemenyApp.localesName}.DWWM_LINK_1`) }}
                 </a>
-                <a class="button is-success" href="/assets/Dossier-projets-Yoann_Le_Goff.pdf" target="_blank" rel="noopener">
+                <a class="button is-success" :href="dwwmLink_2" target="_blank" rel="noopener">
                     {{ t(`projects:${gemenyApp.localesName}.DWWM_LINK_2`) }}
                 </a>
             </div>

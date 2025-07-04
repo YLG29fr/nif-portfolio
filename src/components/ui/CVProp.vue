@@ -2,7 +2,7 @@
     import { ref } from 'vue';
     import CVjpg from '../../assets/img/common/CV-ylg.jpg';
     import CVjpgCropped from '../../assets/img/common/cropped-CV-ylg.jpg';
-    import CVpdf from '../../assets/CV_Alternance_CDA_YLG.pdf';
+    import CVpdf from '../../assets/CV_Alternance_CDA_YLG.pdf' ;
     import { useTranslation } from 'i18next-vue';
     const { t } = useTranslation('errors');
 
@@ -21,7 +21,7 @@
             </div>
 
             <div class="card-footer">
-                <a :href="CVpdf" class="card-footer-item" target="_blank" rel="noopener">
+                <a :href="CVpdf" class="card-footer-item" target="_blank" rel="noreferrer">
                     Open PDF
                 </a>
             <button class="card-footer-item" @click="showZoom = true">
