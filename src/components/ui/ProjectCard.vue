@@ -29,9 +29,11 @@ defineProps<{
       <p class="card-header-title">
         {{ t(`${project.localesName}.TITLE`) }}
       </p>
-      <!-- <button class="button button-top">
-        <i class="fas fa-external-link-alt ml-2"></i>
-      </button> -->
+      <button v-if="project.onlineLink" class="button button-top">
+        <a :href="project.onlineLink" target="_blank" rel="noopener">
+          <i class="fas fa-brands fa-github fa-2xl has-text-grey"></i>
+        </a>
+      </button>
       
     </header>
 

@@ -32,5 +32,6 @@ export const eQonnect_EN = {
 }
 
 export const eQonnect_FR = {
+    TITLE: "eQonnect",
     CARD_DESCRIPTION : "Une carte de visite numérique pour partager vos medias sociaux via des codes QR",
 }
