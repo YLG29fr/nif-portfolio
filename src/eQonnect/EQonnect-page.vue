@@ -7,11 +7,11 @@ import CardTemplate from './eQonnect-vue/CardTemplate.vue';
 import SimpleDataJSON from '../eQonnect/eQonnect-data/simple/userCardData.json';
 const Simple = SimpleDataJSON as CardData
 
-import ProDataJSON from '../eQonnect/eQonnect-data/pro/userCardData.json';
-const Pro = ProDataJSON as CardData
+// import ProDataJSON from '../eQonnect/eQonnect-data/pro/userCardData.json';
+// const Pro = ProDataJSON as CardData
 
-import HexagonDataJSON from '../eQonnect/eQonnect-data/hexagon/userCardData.json';
-const Hexagon = HexagonDataJSON as CardData
+// import HexagonDataJSON from '../eQonnect/eQonnect-data/hexagon/userCardData.json';
+// const Hexagon = HexagonDataJSON as CardData
 
 </script>
 
