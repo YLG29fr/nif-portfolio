@@ -4,6 +4,7 @@ import { mariadb_FR } from "../../data/skills/backend/mariadb";
 import { mongodb_FR } from "../../data/skills/backend/mongodb";
 import { nodejs_FR } from "../../data/skills/backend/nodejs";
 import { springboot_FR } from "../../data/skills/backend/springboot";
+import { postgresql_FR } from "../../data/skills/backend/postgresql";
 
 import { bulma_FR } from "../../data/skills/frontend/bulma";
 import { css_FR } from "../../data/skills/frontend/css";
@@ -31,6 +32,7 @@ export default {
     MongoDB : mongodb_FR,
     NodeJS : nodejs_FR,
     SpringBoot : springboot_FR,
+    PostgreSQL : postgresql_FR,
 
     Bulma : bulma_FR,
     CSS : css_FR,

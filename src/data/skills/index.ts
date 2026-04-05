@@ -15,6 +15,7 @@ import { springboot } from "./backend/springboot";
 import { sql } from "./backend/sql";
 import { mariadb } from "./backend/mariadb";
 import { mongodb } from "./backend/mongodb";
+import { postgresql } from "./backend/postgresql";
 
 import { git } from "./other/git";
 import { gitlab } from "./other/gitlab";
@@ -32,7 +33,7 @@ export const skillsList: Skill[] = [
     vue, react, 
     git, gitlab, github,
     java, springboot, nodejs,
-    sql, mariadb, mongodb,
+    sql, mariadb, mongodb,postgresql,
     intellij, vscode,
     docker,  figma,
     logicoder,
