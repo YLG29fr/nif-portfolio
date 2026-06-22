@@ -39,17 +39,37 @@ defineProps<{
       >
         {{ cardData.primaryLinks[0].label }}
       </a>
-    
+      
+      
       <!-- QR Codes -->
-      <div class="simple-qr" v-if="cardData.qrCodeLinks?.length" id="qrCode-caller">
+      <div class="simple-qr is-hidden-touch" v-if="cardData.qrCodeLinks?.length" id="qrCode-caller">
         <QRSelector 
         :qr-codes="cardData.qrCodeLinks"/>
       </div>
-    
+      
+      <!-- Liens socials -->
+      
+      <div class="columns">
+        <div v-for="link in cardData.socials"
+          :key="link.url"
+          class="column"
+        >
+          <a 
+            class="simple-cta"
+            :href="link.url" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            >
+            {{ link.label }}
+          </a>
+        </div>
+      </div>
       <!-- Localisation discrète -->
-      <p v-if="cardData.location" class="simple-location">
-        {{ cardData.location }}
-      </p>
+      <div class="">
+        <p v-if="cardData.location" class="simple-location ">
+          {{ cardData.location }}
+        </p>
+      </div>
     
     </div>
   </div>
@@ -60,7 +80,7 @@ defineProps<{
 .simple-template {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   padding: 32px 24px;
   gap: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -72,10 +92,10 @@ defineProps<{
 .simple-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
   flex: 1;
-  max-width: 280px;
 }
 
 .simple-avatar {
@@ -94,7 +114,7 @@ defineProps<{
 }
 
 .simple-name {
-  font-size: 1.375rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #1f2937;
   margin: 0;
@@ -102,7 +122,7 @@ defineProps<{
 }
 
 .simple-title {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #6b7280;
   margin: 0;
@@ -112,7 +132,7 @@ defineProps<{
   display: inline-flex;
   padding: 14px 28px;
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
+  color: black;
   text-decoration: none;
   border-radius: 16px;
   font-weight: 600;
@@ -128,7 +148,7 @@ defineProps<{
 }
 
 .simple-location {
-  font-size: 0.8125rem;
+  font-size: 1rem;
   color: #9ca3af;
   margin: 0;
   font-weight: 400;

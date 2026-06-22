@@ -9,7 +9,7 @@ import LegalMentions from './pages/LegalMentions.vue'
 import PageGemenyApp from './pages/projects/PageGemenyApp.vue'
 import PageGemenyAuth from './pages/projects/PageGemenyAuth.vue'
 import PagePortfolio from './pages/projects/PagePortfolio.vue'
-import PageEQonnect from './pages/projects/PageEQonnect.vue'
+// import PageEQonnect from './pages/projects/PageEQonnect.vue'
 
 import EQonnectPOC from './eQonnect/EQonnect-page.vue'
 
@@ -21,7 +21,7 @@ const routes = [
     { path: '/projet/portfolio', name: 'PagePortfolio', component: PagePortfolio },
     { path: '/projet/gemeny-app', name: 'PageGemenyApp', component: PageGemenyApp },
     { path: '/projet/gemeny-auth', name: 'PageGemenyAuth', component: PageGemenyAuth },
-    { path: '/projet/eQonnect', name: 'PageEQonnect', component: PageEQonnect },
+    // { path: '/projet/eQonnect', name: 'PageEQonnect', component: PageEQonnect },
     
     { path: '/projets/:any?', name: 'ProjectsList', component: Index },
     { path: '/projet/:name?', name: 'ProjectNotFound', component: Index },

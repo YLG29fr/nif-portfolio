@@ -14,7 +14,7 @@
     min-width: 280px;
     min-height: 360px; */
     
-    max-height: 99vh;
+    max-height: fit-content;
     /* APPARENCE NEUTRE */
     background: white;
     border-radius: 24px;
@@ -26,9 +26,9 @@
 
 @media (min-width: 480px) {
     .card-frame {
-        max-width: 480px;
+        max-width: 720px;
         max-height: 100vh;
-        aspect-ratio: 9 / 12;
+        /* aspect-ratio: 9 / 12; */
     }
 }
 </style>

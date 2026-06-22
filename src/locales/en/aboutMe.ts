@@ -11,9 +11,9 @@ export default {
     DIPLOMA: "Fullstack Web Developer",
 
     NEWS: "Current status ",
-    STATUS_1: "CDA training at AFPA Brest ",
-    STATUS_2: " (March 2026 - February 2027)",
-    AVAILABILITY: "Apprenticeship available immediately",
+    STATUS_1: "Apprenticeship at Arkéa Brest ",
+    STATUS_2: " (Sept 2026 - 2029)",
+    AVAILABILITY: "",
     FUTURE: "Long term goal",
     FUTURE_CDI: "Full-time role after completion",
     FUTURE_BAC5: "Bachelor's +5 Software Architecture (apprenticeship)",

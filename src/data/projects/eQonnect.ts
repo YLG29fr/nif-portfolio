@@ -17,13 +17,13 @@ export const eQonnect = {
 
     name: "eQonnect",
     localesName: "eQonnect",
-    icon: "/assets/img/projects/eQonnect/logo.png",
+    icon: images[0],
     images: images,
     tags: ["Fullstack"],
     cardLinkedSkills: linkedSkills,
     allLinkedSkills: allLinkedSkills,
     link: "/portfolio/eQonnect",
-    presentation : "/projet/eQonnect",
+    presentation : "", //  /projet/eQonnect
 }
 
 export const eQonnect_EN = {
@@ -32,5 +32,6 @@ export const eQonnect_EN = {
 }
 
 export const eQonnect_FR = {
+    TITLE: "eQonnect",
     CARD_DESCRIPTION : "Une carte de visite numérique pour partager vos medias sociaux via des codes QR",
 }

@@ -11,9 +11,9 @@ export default {
     DIPLOMA: "Développeur Web Fullstack",
 
     NEWS: "Situation actuelle ",
-    STATUS_1: "En formation CDA à l'AFPA Brest ",
-    STATUS_2: " (mars 2026 - février 2027)",
-    AVAILABILITY: "Alternance disponible immédiatement",
+    STATUS_1: "En apprentissage à Arkéa Brest ",
+    STATUS_2: " (sept 2026 - 2029)",
+    AVAILABILITY: "",
     FUTURE: "Objectif à terme",
     FUTURE_CDI: "CDI à l'issue de la formation",
     FUTURE_BAC5: "Bac+5 Expert Architecture Logiciel (alternance)",

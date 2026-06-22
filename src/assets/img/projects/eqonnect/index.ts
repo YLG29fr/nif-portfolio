@@ -1,5 +1,5 @@
-import eqonnect_poc from "./eqonnect_poc.png"
+import eqonnect_0 from "./eqonnect_0.png"
 
 export const images = [
-    eqonnect_poc
+    eqonnect_0,
 ]

@@ -11,6 +11,7 @@
     import SkillIcons from '../../components/ui/SkillsIcons.vue'
     import MyFooter from '../../components/layout/Footer.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
+    import ImageZoom from '../../components/ui/ImageZoom.vue';
 
     import backgroundSVGDark from '../../assets/background/dark/endless-constellation.svg?raw';
     import backgroundSVGLight from '../../assets/background/light/endless-constellation.svg?raw';
@@ -53,14 +54,11 @@
                     <div v-if="project.images" class="is-hidden-mobile is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
                     
                         <!-- Affiche les 3 premières images de chaque projet -->
-                            <img
+                            <div
                             v-for="(img, idx) in project.images.slice(0, 3)" 
-                            :key="idx"
-                            :src="img"
-                            :alt="`screen ${idx + 1} projet ${project.name}`"
-                            style="max-width: 20%;"
-                            class=""
-                            />
+                            >
+                            <ImageZoom :src="img" size="20rem" :alt="`screen ${idx + 1} projet ${project.name}`" />
+                            </div>
                             
                     </div>
                     

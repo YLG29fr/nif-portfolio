@@ -1,6 +1,6 @@
 {
     "name": "Yoann Le Goff",
-    "title": "Concepteur Développeur d'Applications",
+    "title": "Développeur Fullstack",
     "tagline": "Vue.js • Node.js • TypeScript",
     "color": "#44355b",
     "avatarUrl": "https://placehold.co/72x72",
@@ -10,7 +10,7 @@
     "primaryLinks": [
         {
         "label": "Portfolio ↑",
-        "url": "https://nif-dev.github.io/nif-portfolio/",
+        "url": "https://nif-dev.github.io/portfolio/",
         "color": "primary"
         },
         {
