@@ -27,21 +27,21 @@ async function handleSubmit() {
         email: form.email,
         subject: form.subject,
         message: form.message
-});
-if (success.value) {
-    console.info(t('contactMe:SUCCESS_MESSAGE'));
-    form.name = '';
-    form.email = '';
-    form.subject = '';
-    form.message = '';
+    });
+    if (success.value) {
+        console.info(t('contactMe:SUCCESS_MESSAGE'));
+        form.name = '';
+        form.email = '';
+        form.subject = '';
+        form.message = '';
 
-    setTimeout(() => {
-        isSubmitting.value = false;
-    }, 10000);
-}
-if (error.value) {
-    console.error(t('contactMe:ERROR_MESSAGE'));
-}
+        setTimeout(() => {
+            isSubmitting.value = false;
+        }, 10000);
+    }
+    if (error.value) {
+        console.error(t('contactMe:ERROR_MESSAGE'));
+    }
 
 }
 
